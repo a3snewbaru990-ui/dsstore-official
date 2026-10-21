@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DS STORE — Joki Rank Mobile Legends Season 42</title>
+<meta name="description" content="DS STORE: joki rank Mobile Legends Season 42, mulai Rp 5.000 per bintang. Respon cepat, progres kilat, 100% amanah. Pesan langsung lewat WhatsApp.">
+<meta name="theme-color" content="#0f172a">
+<meta name="color-scheme" content="dark">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+
+<link rel="preconnect" href="https://cdn.tailwindcss.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        night:  { 900:'#080e1c', 950:'#050a15' },
+        steel:  { 800:'#1b2740', 900:'#16233d' },
+        brand:  { 300:'#67e8f9', 400:'#22d3ee', 500:'#06b6d4', 600:'#0891b2', 700:'#0e7490' },
+        ember:  { 300:'#fcd34d', 400:'#fbbf24', 500:'#f59e0b', 600:'#d97706' },
+        bronze: { 400:'#c4a27a', 500:'#a6835d' },
+        peak:   { 500:'#e5484d' }
+      },
+      fontFamily: {
+        sans:    ['"Instrument Sans"','system-ui','-apple-system','Segoe UI','sans-serif'],
+        display: ['"Chakra Petch"','"Instrument Sans"','system-ui','sans-serif']
+      },
+      boxShadow: { plate: '0 24px 60px -30px rgba(0,0,0,.9)' }
+    }
+  }
+};
+</script>
+
+<style>
+  :root{
+    --night:#080e1c;
+    --slate:#0f172a;
+    --steel:#16233d;
+    --cyan:#06b6d4;
+    --ember:#f59e0b;
+    --bronze:#a6835d;
+    --peak:#e5484d;
+    --line:rgba(148,163,184,.16);
+    --dim:#8b9bb4;
+  }
+
+  html{ -webkit-text-size-adjust:100%; color-scheme: dark; }
+  [hidden]{ display:none !important; }
+
+  body{
+    background-color:var(--slate);
+    background-image:
+      radial-gradient(1200px 680px at 8% -10%, rgba(6,182,212,.14), transparent 60%),
+      radial-gradient(900px 520px at 96% 2%, rgba(245,158,11,.08), transparent 58%),
+      linear-gradient(180deg,#0f172a 0%, #0a1122 55%, #060b16 100%);
+    background-attachment: fixed;
+    -webkit-tap-highlight-color: rgba(6,182,212,.22);
+  }
+  @media (max-width: 767px){ body{ background-attachment: scroll; } }
+  @media (pointer: fine){ html{ overscroll-behavior:none; } }
+
+  /* ---------- Focus ---------- */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  select:focus-visible, textarea:focus-visible, summary:focus-visible, [tabindex]:focus-visible{
+    outline: 2px solid var(--cyan);
+    outline-offset: 2px;
+    border-radius: 6px;
+  }
+
+  /* ---------- Type ---------- */
+  .display{ font-family:'Chakra Petch','Instrument Sans',system-ui,sans-serif; }
+  .num{ font-variant-numeric: tabular-nums; }
+  .measure{ max-width: 62ch; }
+  .measure-sm{ max-width: 48ch; }
+  .rule{ height:1px; background:var(--line); }
+
+  /* ---------- Form controls ---------- */
+  .field{
+    width:100%;
+    border-radius:.7rem;
+    border:1px solid var(--line);
+    background-color:rgba(3,8,20,.75);
+    color:#e6ecf5;
+    padding:.72rem .85rem;
+    font-size:.9375rem;
+    line-height:1.5;
+    font-family:inherit;
+    transition: border-color .16s ease, box-shadow .16s ease;
+  }
+  .field::placeholder{ color:#5c6b83; opacity:1; }
+  .field:hover{ border-color:rgba(6,182,212,.40); }
+  .field:focus{
+    border-color:var(--cyan);
+    box-shadow:0 0 0 3px rgba(6,182,212,.20);
+    outline:2px solid transparent;
+    outline-offset:2px;
+  }
+  .field:focus-visible{ outline:2px solid var(--cyan); outline-offset:2px; }
+  .field[aria-invalid="true"]{ border-color:#f43f5e; box-shadow:0 0 0 3px rgba(244,63,94,.16); }
+  select.field{
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%238b9bb4' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 7.5 10 12.5 15 7.5'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right .8rem center;
+    background-size:1.1em;
+    padding-right:2.4rem;
+    -webkit-appearance:none;
+    appearance:none;
+  }
+  .field-label{ display:block; font-size:.8125rem; font-weight:600; color:#c3cddc; margin-bottom:.35rem; }
+  .field-error{ display:flex; align-items:flex-start; gap:.4rem; margin-top:.4rem; font-size:.78rem; line-height:1.4; color:#fda4af; }
+  .field-hint{ margin-top:.4rem; font-size:.78rem; color:#6f7f96; }
+  .label-pointer{ cursor:pointer; }
+  input[type="checkbox"], input[type="radio"]{ accent-color:var(--cyan); width:1.05rem; height:1.05rem; flex:none; cursor:pointer; }
+
+  /* ---------- Buttons (flat, no gradient washes) ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+    border-radius:.7rem; padding:.8rem 1.25rem;
+    font-weight:600; font-size:.9375rem; line-height:1.2;
+    touch-action:manipulation; text-align:center; cursor:pointer;
+    transition: background-color .16s ease, border-color .16s ease, color .16s ease, transform .16s ease;
+  }
+  .btn:active{ transform:translateY(1px); }
+  .btn-primary{ background-color:var(--cyan); color:#04212b; }
+  .btn-primary:hover{ background-color:#22d3ee; }
+  .btn-ember{ background-color:var(--ember); color:#2a1a03; }
+  .btn-ember:hover{ background-color:#fbbf24; }
+  .btn-ghost{ border:1px solid var(--line); background-color:rgba(15,23,42,.55); color:#dbe4f0; }
+  .btn-ghost:hover{ border-color:rgba(6,182,212,.55); background-color:rgba(6,182,212,.09); color:#fff; }
+  .btn[disabled], button[disabled]{ opacity:.4; cursor:not-allowed; transform:none; }
+
+  /* ---------- Hero: page-load reveal (single orchestrated moment) ---------- */
+  .reveal{ opacity:0; animation: revealUp .72s cubic-bezier(.2,.7,.3,1) forwards; }
+  @keyframes revealUp{ from{ opacity:0; transform:translateY(14px); } to{ opacity:1; transform:translateY(0); } }
+  .d1{ animation-delay:.05s } .d2{ animation-delay:.14s } .d3{ animation-delay:.23s }
+  .d4{ animation-delay:.32s } .d5{ animation-delay:.41s } .d6{ animation-delay:.50s }
+  .hero-art{ opacity:0; animation: artIn 1s cubic-bezier(.2,.7,.3,1) .1s forwards; }
+  @keyframes artIn{ from{ opacity:0; transform:scale(1.04); } to{ opacity:1; transform:scale(1); } }
+
+  /* ---------- Header banner carousel (top of the hero) ---------- */
+  .banner{
+    position:relative; overflow:hidden; isolation:isolate;
+    border-radius:1rem; background-color:#050a14;
+    border:1px solid rgba(148,163,184,.16);
+    box-shadow:0 24px 60px -26px rgba(0,0,0,.9);
+  }
+  .banner__stage{ position:absolute; inset:0; z-index:0; }
+  .banner__slide{
+    position:absolute; inset:0; opacity:0; visibility:hidden;
+    transition:opacity .7s ease, transform .7s cubic-bezier(.22,.7,.25,1), visibility 0s linear .7s;
+    will-change:opacity, transform;
+  }
+  .banner__slide.from-left{ transform:translate3d(-3%,0,0); }
+  .banner__slide.from-right{ transform:translate3d(3%,0,0); }
+  .banner__slide.is-active{ opacity:1; visibility:visible; transform:none; transition-delay:0s; }
+  .banner__backdrop{
+    position:absolute; inset:-12%;
+    background-size:cover; background-position:center;
+    filter:blur(30px) saturate(1.25) brightness(.42);
+    transform:scale(1.06);
+  }
+  .banner__media{
+    position:absolute; top:0; bottom:0; left:50%;
+    transform:translateX(-50%); height:100%; aspect-ratio:16/9;
+    box-shadow:0 18px 50px rgba(0,0,0,.55);
+  }
+  .banner__img{ display:block; width:100%; height:100%; object-fit:cover; }
+  .banner__vignette{
+    position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:linear-gradient(90deg, rgba(4,8,17,.62) 0%, rgba(4,8,17,0) 17%, rgba(4,8,17,0) 83%, rgba(4,8,17,.62) 100%);
+  }
+  .banner__nav{
+    position:absolute; top:50%; z-index:3; transform:translateY(-50%);
+    display:flex; align-items:center; justify-content:center;
+    width:2.75rem; height:2.75rem; border-radius:999px;
+    border:1px solid rgba(255,255,255,.20);
+    background-color:rgba(8,14,28,.55);
+    -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
+    color:#fff; cursor:pointer;
+    transition:background-color .18s ease, border-color .18s ease, color .18s ease;
+  }
+  .banner__nav:hover{ background-color:var(--cyan); border-color:transparent; color:#04212b; }
+  .banner__nav:focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; }
+  .banner__nav--prev{ left:.9rem; }
+  .banner__nav--next{ right:.9rem; }
+  .banner__bar{ display:flex; align-items:flex-end; justify-content:space-between; gap:1rem; margin-top:1rem; }
+  .banner__eyebrow{ font-size:.7rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:#67e8f9; }
+  .banner__title{ margin-top:.3rem; font-family:'Chakra Petch',sans-serif; font-size:1.05rem; font-weight:700; color:#f1f5f9; }
+  .banner__dots{ display:flex; align-items:center; gap:.25rem; flex:none; }
+  .banner__dot{
+    display:flex; align-items:center; justify-content:center;
+    width:1.5rem; height:1.75rem; padding:0; border:0; background:none; cursor:pointer;
+  }
+  .banner__dot::after{
+    content:''; width:.5rem; height:.5rem; border-radius:999px;
+    background-color:rgba(148,163,184,.34);
+    transition:width .25s ease, background-color .25s ease;
+  }
+  .banner__dot:hover::after{ background-color:rgba(203,213,225,.75); }
+  .banner__dot.is-active::after{ width:1.6rem; background-color:var(--cyan); }
+  .banner__dot:focus-visible{ outline:2px solid var(--cyan); outline-offset:2px; border-radius:.35rem; }
+
+  @media (min-width:768px){
+    .banner{ height:clamp(290px,44vh,460px); border-radius:1.25rem; }
+  }
+  @media (max-width:767px){
+    .banner{ aspect-ratio:16/9; }
+    .banner__backdrop{ display:none; }
+    .banner__vignette{ background:linear-gradient(90deg, rgba(4,8,17,.45) 0%, rgba(4,8,17,0) 15%, rgba(4,8,17,0) 85%, rgba(4,8,17,.45) 100%); }
+    .banner__nav{ width:2.3rem; height:2.3rem; }
+    .banner__nav--prev{ left:.5rem; }
+    .banner__nav--next{ right:.5rem; }
+    .banner__title{ font-size:.95rem; }
+  }
+
+  /* ---------- Rank track (horizontal, used in hero + form) ---------- */
+  .track{ display:flex; align-items:center; gap:0; }
+  .track__node{ display:flex; align-items:center; gap:.45rem; min-width:0; }
+  .track__emblem{
+    height:1.4rem; width:auto; flex:none; opacity:.62;
+    filter:drop-shadow(0 1px 3px rgba(0,0,0,.65));
+    transition:opacity .2s ease, filter .2s ease;
+  }
+  .track__node.is-active .track__emblem{ opacity:1; filter:drop-shadow(0 0 9px rgba(6,182,212,.7)) drop-shadow(0 1px 3px rgba(0,0,0,.65)); }
+  .track__node.is-peak .track__emblem{ opacity:1; filter:drop-shadow(0 0 9px rgba(229,72,77,.65)) drop-shadow(0 1px 3px rgba(0,0,0,.65)); }
+  .track__name{ font-size:.72rem; font-weight:600; letter-spacing:.04em; color:#7e8ea6; white-space:nowrap; }
+  .track__node.is-active .track__name{ color:#e6f7fb; }
+  .track__link{ flex:1 1 auto; height:1px; min-width:.75rem; background:var(--line); }
+  .track__node.is-active + .track__link{ background:rgba(6,182,212,.45); }
+
+  /* ---------- Ladder (package list) ---------- */
+  .ladder{ list-style:none; margin:0; padding:0; }
+  .ladder__row{
+    --row-pad:1.35rem;
+    --dot-c:.7rem;
+    --rail-w:2.25rem;
+    position:relative;
+    display:flex; flex-direction:column;
+    padding:var(--row-pad) 0 var(--row-pad) var(--rail-w);
+    border-top:1px solid var(--line);
+  }
+  .ladder__row:last-child{ border-bottom:1px solid var(--line); }
+  .ladder__rail{ position:absolute; left:0; top:var(--row-pad); bottom:var(--row-pad); width:var(--rail-w); }
+  .ladder__rail::before{
+    content:''; position:absolute; left:50%;
+    top:calc(-1 * var(--row-pad)); bottom:calc(-1 * var(--row-pad));
+    width:1px; background:var(--line); transform:translateX(-50%);
+  }
+  .ladder__row:first-child .ladder__rail::before{ top:var(--dot-c); }
+  .ladder__row:last-child .ladder__rail::before{ bottom:calc(100% - var(--dot-c)); }
+  .ladder__dot{
+    position:absolute; left:50%; top:var(--dot-c);
+    width:.7rem; height:.7rem; border-radius:999px;
+    transform:translate(-50%,-50%);
+    background:var(--night); border:1.5px solid rgba(148,163,184,.45); z-index:1;
+    transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+  }
+  .ladder__row.is-active .ladder__dot{ border-color:var(--cyan); background:var(--cyan); box-shadow:0 0 0 4px rgba(6,182,212,.16); }
+  .ladder__row.is-peak .ladder__dot{ border-color:var(--peak); background:var(--peak); box-shadow:0 0 0 4px rgba(229,72,77,.14); }
+  .ladder__body{ min-width:0; }
+  .ladder__title{ display:flex; flex-wrap:wrap; align-items:baseline; gap:.55rem; }
+  .ladder__emblem{
+    height:1.9rem; width:auto; flex:none; align-self:center; opacity:.8;
+    filter:drop-shadow(0 2px 5px rgba(0,0,0,.55));
+    transition:opacity .2s ease, filter .2s ease;
+  }
+  .ladder__row.is-active .ladder__emblem{ opacity:1; filter:drop-shadow(0 0 11px rgba(6,182,212,.6)) drop-shadow(0 2px 5px rgba(0,0,0,.55)); }
+  .ladder__name{ font-family:'Chakra Petch',sans-serif; font-size:1.15rem; font-weight:700; color:#f1f5f9; letter-spacing:.01em; }
+  .ladder__tier{ font-size:.75rem; font-weight:500; color:#6f7f96; }
+  .ladder__note{ margin-top:.35rem; font-size:.875rem; line-height:1.5; color:#93a2b8; max-width:46ch; }
+  .ladder__price{ margin-top:.9rem; display:flex; align-items:baseline; gap:.5rem; }
+  .ladder__amount{ font-family:'Chakra Petch',sans-serif; font-size:1.3rem; font-weight:700; color:#67e8f9; font-variant-numeric:tabular-nums; }
+  .ladder__unit{ font-size:.78rem; color:#6f7f96; }
+  .ladder__action{ margin-top:.9rem; }
+  .ladder__row.is-active .ladder__amount{ color:#a5f3fc; }
+  .chip{
+    display:inline-flex; align-items:center; gap:.35rem;
+    font-size:.7rem; font-weight:600; letter-spacing:.02em;
+    padding:.2rem .5rem; border-radius:.35rem; border:1px solid currentColor;
+  }
+  .chip--cyan{ color:#67e8f9; background:rgba(6,182,212,.10); }
+  .chip--ember{ color:#fcd34d; background:rgba(245,158,11,.10); }
+
+  @media (min-width:860px){
+    .ladder__row{
+      --row-pad:1.15rem;
+      --dot-c:50%;
+      --rail-w:2.5rem;
+      display:grid;
+      grid-template-columns:minmax(0,1fr) 11rem 9.5rem;
+      align-items:center; column-gap:1.5rem;
+    }
+    .ladder__price{ margin-top:0; flex-direction:column; align-items:flex-end; gap:.1rem; }
+    .ladder__action{ margin-top:0; }
+    .ladder__action .btn{ width:100%; }
+  }
+
+  /* ---------- Choice rows (radio) ---------- */
+  .choice{
+    position:relative; display:grid;
+    grid-template-columns: 1.5rem minmax(0,1fr) auto;
+    align-items:center; gap:.85rem;
+    padding:.95rem 1rem;
+    border:1px solid var(--line); border-radius:.7rem;
+    background-color:rgba(3,8,20,.45);
+    cursor:pointer;
+    transition: border-color .16s ease, background-color .16s ease;
+  }
+  .choice:hover{ border-color:rgba(6,182,212,.40); }
+  .choice:has(input:checked){ border-color:rgba(6,182,212,.75); background-color:rgba(6,182,212,.10); }
+  .choice:has(input:focus-visible){ outline:2px solid var(--cyan); outline-offset:2px; }
+  .choice__mark{
+    width:1.15rem; height:1.15rem; border-radius:999px; border:1.5px solid rgba(148,163,184,.5);
+    display:flex; align-items:center; justify-content:center; flex:none;
+  }
+  .choice:has(input:checked) .choice__mark{ border-color:var(--cyan); }
+  .choice__mark::after{ content:''; width:.55rem; height:.55rem; border-radius:999px; background:var(--cyan); transform:scale(0); transition:transform .16s ease; }
+  .choice:has(input:checked) .choice__mark::after{ transform:scale(1); }
+  .choice__title{ font-family:'Chakra Petch',sans-serif; font-weight:600; color:#eef3f9; font-size:.95rem; }
+  .choice__meta{ font-size:.8rem; color:#7e8ea6; }
+  .choice__price{ font-family:'Chakra Petch',sans-serif; font-weight:700; font-size:.95rem; color:#67e8f9; font-variant-numeric:tabular-nums; text-align:right; }
+  /* rank rows carry the real rank emblem */
+  .choice--rank{ grid-template-columns:2.25rem 1.5rem minmax(0,1fr) auto; gap:.7rem; }
+  .choice__emblem{ display:flex; align-items:center; justify-content:center; height:2.25rem; }
+  .choice__emblem img{
+    height:2.05rem; width:auto; display:block; opacity:.72;
+    filter:drop-shadow(0 2px 5px rgba(0,0,0,.55));
+    transition:opacity .2s ease, filter .2s ease;
+  }
+  .choice__emblem svg{ height:1.85rem; width:1.85rem; opacity:.5; }
+  .choice:has(input:checked) .choice__emblem img{ opacity:1; filter:drop-shadow(0 0 10px rgba(6,182,212,.65)) drop-shadow(0 2px 5px rgba(0,0,0,.55)); }
+  .choice:has(input:checked) .choice__emblem svg{ opacity:.9; }
+
+  /* ---------- Star meter (the memorable element) ---------- */
+  .meter{ display:flex; flex-wrap:wrap; align-items:center; gap:.1rem; line-height:1; }
+  .meter__pip{ font-size:1.15rem; color:rgba(148,163,184,.22); }
+  .meter__pip--on{ color:var(--cyan); }
+  .meter__pip--bonus{ color:var(--ember); }
+  .meter.is-bonus .meter__pip--bonus{ animation: pipIn .5s cubic-bezier(.2,.9,.3,1) backwards; }
+  @keyframes pipIn{ 0%{ opacity:0; transform:scale(.3) rotate(-25deg);} 70%{ transform:scale(1.22) rotate(6deg);} 100%{ opacity:1; transform:scale(1) rotate(0);} }
+  .meter__more{ font-size:.8rem; font-weight:600; color:#8b9bb4; margin-left:.3rem; }
+
+  /* ---------- Receipt / order ticket ---------- */
+  .ticket{ background-color:rgba(3,8,20,.55); border:1px solid var(--line); border-radius:.9rem; }
+  .ticket__row{ display:flex; align-items:baseline; justify-content:space-between; gap:1rem; font-size:.875rem; }
+  .ticket__key{ color:#7e8ea6; }
+  .ticket__val{ color:#e6ecf5; font-weight:600; text-align:right; font-variant-numeric:tabular-nums; }
+  .ticket__dash{ border-top:1px dashed rgba(148,163,184,.28); }
+
+  /* ---------- Spec sheet ---------- */
+  .spec{ display:grid; gap:0; }
+  .spec__row{
+    display:grid; grid-template-columns: 2.5rem minmax(0,1fr); gap:0 1rem;
+    padding:1.4rem 0; border-top:1px solid var(--line);
+    align-items:start;
+  }
+  .spec__row:last-child{ border-bottom:1px solid var(--line); }
+  .spec__icon{ width:2.5rem; height:2.5rem; display:flex; align-items:center; justify-content:center; border-radius:.6rem; background:rgba(6,182,212,.10); color:#67e8f9; }
+  .spec__title{ font-family:'Chakra Petch',sans-serif; font-weight:600; color:#f1f5f9; font-size:1rem; }
+  .spec__body{ margin-top:.3rem; font-size:.9rem; line-height:1.55; color:#93a2b8; max-width:52ch; }
+  @media (min-width:860px){
+    .spec{ grid-template-columns:1fr 1fr; column-gap:3.5rem; }
+    .spec__row:nth-child(2){ border-top:1px solid var(--line); }
+    .spec__row:nth-child(2n){ border-top:1px solid var(--line); }
+  }
+
+  /* ---------- Timeline (cara pesan) ---------- */
+  .timeline{ list-style:none; margin:0; padding:0; display:grid; gap:0; }
+  .timeline__step{ position:relative; padding:0 0 2rem 2.5rem; border-left:1px solid var(--line); }
+  .timeline__step:last-child{ border-left-color:transparent; padding-bottom:0; }
+  .timeline__marker{
+    position:absolute; left:-.72rem; top:0;
+    width:1.45rem; height:1.45rem; border-radius:.4rem;
+    display:flex; align-items:center; justify-content:center;
+    background-color:var(--slate); border:1px solid rgba(148,163,184,.4);
+    font-family:'Chakra Petch',sans-serif; font-size:.75rem; font-weight:700; color:#9fb0c6;
+    font-variant-numeric:tabular-nums;
+  }
+  .timeline__step:first-child .timeline__marker{ border-color:var(--cyan); color:#67e8f9; }
+  .timeline__title{ font-family:'Chakra Petch',sans-serif; font-weight:600; color:#f1f5f9; font-size:1rem; }
+  .timeline__body{ margin-top:.3rem; font-size:.9rem; line-height:1.55; color:#93a2b8; max-width:44ch; }
+  @media (min-width:860px){
+    .timeline{ grid-template-columns:repeat(5,1fr); gap:0; }
+    .timeline__step{ padding:2.4rem 1.25rem 0 0; border-left:0; border-top:1px solid var(--line); }
+    .timeline__step:last-child{ border-top:1px solid var(--line); }
+    .timeline__marker{ left:0; top:-.72rem; }
+  }
+
+  /* ---------- Stepper ---------- */
+  .step-tab{ display:flex; flex-direction:column; align-items:center; gap:.4rem; background:none; border:0; padding:.2rem; cursor:pointer; touch-action:manipulation; }
+  .step-dot{
+    display:flex; align-items:center; justify-content:center;
+    width:1.85rem; height:1.85rem; border-radius:.45rem;
+    font-family:'Chakra Petch',sans-serif; font-size:.78rem; font-weight:700;
+    border:1px solid rgba(148,163,184,.3); color:#8b9bb4; background-color:transparent;
+    font-variant-numeric:tabular-nums;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease;
+  }
+  .step-tab[aria-current="step"] .step-dot{ border-color:var(--cyan); background-color:var(--cyan); color:#04212b; }
+  .step-tab[data-state="done"] .step-dot{ border-color:rgba(245,158,11,.6); color:#fbbf24; }
+  .step-label{ font-size:.7rem; font-weight:600; color:#7e8ea6; line-height:1.2; text-align:center; }
+  .step-tab[aria-current="step"] .step-label{ color:#e6ecf5; }
+
+  /* ---------- FAQ ---------- */
+  .faq-item{ border-top:1px solid var(--line); }
+  .faq-item:last-child{ border-bottom:1px solid var(--line); }
+  details > summary{ list-style:none; cursor:pointer; }
+  details > summary::-webkit-details-marker{ display:none; }
+  .faq-item[open] .faq-chevron{ transform:rotate(180deg); }
+  .faq-chevron{ transition:transform .2s ease; }
+  .faq-panel[hidden]{ display:none; }
+  .faq-panel.is-open > div{ animation: faqIn .24s ease both; }
+  @keyframes faqIn{ from{ opacity:0; transform:translateY(-5px);} to{ opacity:1; transform:translateY(0);} }
+
+  /* ---------- Toast ---------- */
+  #toast{
+    position:fixed; top:calc(env(safe-area-inset-top,0px) + 5.25rem); left:50%; z-index:80;
+    transform:translate(-50%,-10px); opacity:0; pointer-events:none;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+  #toast.is-visible{ transform:translate(-50%,0); opacity:1; }
+
+  .grain{
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.32'/%3E%3C/svg%3E");
+  }
+  .no-scrollbar::-webkit-scrollbar{ width:0; height:0; }
+  .no-scrollbar{ scrollbar-width:none; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto !important; }
+    *, *::before, *::after{
+      animation-duration:.001ms !important; animation-iteration-count:1 !important;
+      transition-duration:.001ms !important; scroll-behavior:auto !important;
+    }
+    .reveal, .hero-art{ opacity:1 !important; transform:none !important; }
+  }
+</style>
+</head>
+
+<body class="font-sans text-slate-200 antialiased selection:bg-cyan-400/30 selection:text-white">
+
+<a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[90] focus:rounded-lg focus:bg-brand-500 focus:px-4 focus:py-2 focus:font-semibold focus:text-slate-900">Lewati ke konten utama</a>
+
+<!-- ============================ HEADER ============================ -->
+<header id="site-header" class="sticky top-0 z-50 border-b border-white/[0.07] bg-night-950/85 backdrop-blur-xl" style="padding-top:env(safe-area-inset-top,0px);">
+  <div class="mx-auto flex max-w-[80rem] items-center gap-3 px-4 py-3 sm:px-6 lg:px-8">
+    <a href="#beranda" class="flex min-w-0 items-center gap-2.5">
+      <span class="relative flex h-10 w-10 flex-none items-center justify-center overflow-hidden rounded-lg border border-ember-500/30 bg-night-900">
+        <img src="assets/ds-store-logo.jpg" width="40" height="40" alt="" class="h-full w-full object-cover" fetchpriority="high">
+      </span>
+      <span class="min-w-0">
+        <span class="display block text-[15px] font-bold leading-tight tracking-wide text-white" translate="no">DS STORE</span>
+        <span class="block truncate text-[11px] font-medium leading-tight text-brand-300/85">Joki Rank MLBB</span>
+      </span>
+    </a>
+
+    <nav class="ml-auto hidden items-center gap-0.5 lg:flex" aria-label="Navigasi utama">
+      <a href="#paket" class="rounded-md px-3 py-2 text-sm font-medium text-slate-400 transition-colors duration-150 hover:bg-white/5 hover:text-white">Paket</a>
+      <a href="#kenapa" class="rounded-md px-3 py-2 text-sm font-medium text-slate-400 transition-colors duration-150 hover:bg-white/5 hover:text-white">Keunggulan</a>
+      <a href="#cara" class="rounded-md px-3 py-2 text-sm font-medium text-slate-400 transition-colors duration-150 hover:bg-white/5 hover:text-white">Cara Pesan</a>
+      <a href="#pesan" class="rounded-md px-3 py-2 text-sm font-medium text-slate-400 transition-colors duration-150 hover:bg-white/5 hover:text-white">Formulir</a>
+      <a href="#faq" class="rounded-md px-3 py-2 text-sm font-medium text-slate-400 transition-colors duration-150 hover:bg-white/5 hover:text-white">FAQ</a>
+    </nav>
+
+    <a href="https://wa.me/6281807283181" target="_blank" rel="noopener noreferrer" class="btn btn-ghost ml-auto hidden !px-4 !py-2.5 !text-sm lg:inline-flex">Chat admin</a>
+
+    <button type="button" id="nav-toggle" class="btn btn-ghost !px-3 !py-2.5 lg:hidden" aria-expanded="false" aria-controls="mobile-nav" aria-label="Buka menu navigasi">
+      <svg id="nav-icon-open" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg id="nav-icon-close" class="hidden h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+  <div id="mobile-nav" class="hidden border-t border-white/[0.07] bg-night-950/95 lg:hidden" style="padding-bottom:env(safe-area-inset-bottom,0px);">
+    <nav class="mx-auto flex max-w-[80rem] flex-col gap-0.5 px-4 py-4 sm:px-6" aria-label="Navigasi seluler">
+      <a href="#paket" class="rounded-md px-3 py-2.5 text-sm font-medium text-slate-300 transition-colors duration-150 hover:bg-white/5 hover:text-white">Paket</a>
+      <a href="#kenapa" class="rounded-md px-3 py-2.5 text-sm font-medium text-slate-300 transition-colors duration-150 hover:bg-white/5 hover:text-white">Keunggulan</a>
+      <a href="#cara" class="rounded-md px-3 py-2.5 text-sm font-medium text-slate-300 transition-colors duration-150 hover:bg-white/5 hover:text-white">Cara Pesan</a>
+      <a href="#pesan" class="rounded-md px-3 py-2.5 text-sm font-medium text-slate-300 transition-colors duration-150 hover:bg-white/5 hover:text-white">Formulir pemesanan</a>
+      <a href="#faq" class="rounded-md px-3 py-2.5 text-sm font-medium text-slate-300 transition-colors duration-150 hover:bg-white/5 hover:text-white">FAQ</a>
+      <a href="https://wa.me/6281807283181" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-3 w-full">Chat admin WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ============================ HERO ============================ -->
+<section id="beranda" class="relative scroll-mt-24">
+  <!-- ===== HEADER BANNER CAROUSEL : promo banner paling atas, auto-play ===== -->
+  <div class="relative overflow-hidden border-b border-white/[0.07] bg-night-950">
+    <div class="pointer-events-none absolute inset-0 bg-[radial-gradient(60rem_26rem_at_50%_-14rem,rgba(6,182,212,.16),transparent_72%)]" aria-hidden="true"></div>
+    <div class="relative mx-auto max-w-[80rem] px-4 pb-7 pt-5 sm:px-6 sm:pt-7 lg:px-8 lg:pb-9" id="banner-carousel">
+      <div class="banner" id="banner" role="region" aria-roledescription="carousel" aria-label="Promo banner DS STORE">
+        <div class="banner__stage">
+          <div class="banner__slide is-active" data-banner-slide data-eyebrow="Promo Season 42" data-title="Promo Joki Akun" role="group" aria-roledescription="slide" aria-label="1 dari 2">
+            <div class="banner__backdrop" style="background-image:url('assets/banners/banner-granger.jpg')" aria-hidden="true"></div>
+            <div class="banner__media">
+              <img class="banner__img" src="assets/banners/banner-granger.jpg" srcset="assets/banners/banner-granger-sm.jpg 960w, assets/banners/banner-granger.jpg 1920w" sizes="(max-width: 767px) 92vw, 760px" width="1920" height="1072" alt="Poster Promo Joki Akun Season 42 dengan hero Granger M7" fetchpriority="high" decoding="async">
+            </div>
+          </div>
+          <div class="banner__slide" data-banner-slide data-eyebrow="Promo Season 42" data-title="Promo Joki Gendong &amp; Mabar" role="group" aria-roledescription="slide" aria-label="2 dari 2">
+            <div class="banner__backdrop" style="background-image:url('assets/banners/banner-sora.jpg')" aria-hidden="true"></div>
+            <div class="banner__media">
+              <img class="banner__img" src="assets/banners/banner-sora.jpg" srcset="assets/banners/banner-sora-sm.jpg 960w, assets/banners/banner-sora.jpg 1920w" sizes="(max-width: 767px) 92vw, 760px" width="1920" height="1072" alt="Poster Promo Joki Gendong dan mabar bareng pro player" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+        <div class="banner__vignette" aria-hidden="true"></div>
+        <button type="button" class="banner__nav banner__nav--prev" data-banner-prev aria-label="Tampilkan banner sebelumnya">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button type="button" class="banner__nav banner__nav--next" data-banner-next aria-label="Tampilkan banner berikutnya">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <div class="banner__bar">
+        <div class="min-w-0">
+          <p class="banner__eyebrow" data-banner-eyebrow>Promo Season 42</p>
+          <p class="banner__title" data-banner-title>Promo Joki Akun</p>
+        </div>
+        <div class="banner__dots" role="group" aria-label="Pilih banner promo">
+          <button type="button" class="banner__dot is-active" data-banner-dot="0" aria-label="Tampilkan banner 1, Promo Season 42" aria-current="true"><span class="sr-only">Promo Season 42</span></button>
+          <button type="button" class="banner__dot" data-banner-dot="1" aria-label="Tampilkan banner 2, Promo Joki Gendong"><span class="sr-only">Promo Joki Gendong</span></button>
+        </div>
+      </div>
+      <p class="sr-only" aria-live="polite" data-banner-live>Promo Season 42</p>
+    </div>
+  </div>
+
+  <div class="grid lg:grid-cols-[minmax(0,1.05fr)_minmax(0,.95fr)]">
+    <!-- copy column -->
+    <div class="relative z-10 px-4 pb-14 pt-14 sm:px-6 lg:px-8 lg:pb-20 lg:pt-24">
+      <div class="max-w-[42rem]">
+        <p class="reveal d1 flex items-center gap-2 text-sm font-medium text-brand-300">
+          <span class="inline-block h-1.5 w-1.5 rounded-full bg-brand-400"></span>
+          Promo Season 42 &#183; closing 15 Desember 2026
+        </p>
+
+        <h1 class="display reveal d2 mt-6 text-[clamp(2.6rem,6.2vw,4.6rem)] font-bold uppercase leading-[0.98] tracking-[-0.015em] text-white">
+          Promo Joki Akun
+          <span class="mt-4 flex w-fit items-center gap-2.5 border border-ember-500/55 px-3.5 py-1.5 text-[clamp(.85rem,1.5vw,1.15rem)] font-bold tracking-[0.08em] text-ember-400">
+            <span class="inline-block h-1.5 w-1.5 rounded-full bg-ember-500"></span>
+            Season 42
+          </span>
+        </h1>
+
+        <p class="reveal d3 measure mt-7 text-[1.0625rem] leading-relaxed text-slate-400">
+          Rank <span class="font-semibold text-white" translate="no">Mobile Legends</span> kamu naikin tanpa ribet. Admin masuk, kamu pantau progresnya, akun kembali utuh. Mulai <span class="font-semibold text-brand-300">Rp 5.000</span> per bintang.
+        </p>
+
+        <div class="reveal d4 mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a href="#pesan" class="btn btn-primary w-full sm:w-auto">
+            Isi formulir pemesanan
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="https://wa.me/6281807283181?text=Halo%20Admin%20DS%20STORE%2C%20saya%20mau%20tanya%20paket%20joki%20rank%20Season%2042." target="_blank" rel="noopener noreferrer" class="btn btn-ghost w-full sm:w-auto">Tanya admin dulu</a>
+        </div>
+
+        <dl class="reveal d5 mt-11 grid max-w-lg grid-cols-3 gap-px overflow-hidden rounded-lg bg-white/[0.08]">
+          <div class="bg-night-900/80 px-4 py-3.5">
+            <dt class="text-[11px] font-medium text-slate-500">Mulai dari</dt>
+            <dd class="num display mt-1 text-lg font-bold text-brand-300">Rp 5.000</dd>
+          </div>
+          <div class="bg-night-900/80 px-4 py-3.5">
+            <dt class="text-[11px] font-medium text-slate-500">Balasan admin</dt>
+            <dd class="num display mt-1 text-lg font-bold text-white">10 menit</dd>
+          </div>
+          <div class="bg-night-900/80 px-4 py-3.5">
+            <dt class="text-[11px] font-medium text-slate-500">Rating</dt>
+            <dd class="num display mt-1 text-lg font-bold text-ember-400">4.9 / 5</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <!-- art column: image bleeds to the right viewport edge -->
+    <div class="relative min-h-[20rem] lg:min-h-0">
+      <div class="hero-art absolute inset-0">
+        <img src="assets/hero-mlbb.jpg" width="739" height="415" alt="Visual bertema Mobile Legends bergaya Granger M7 dengan latar biru malam dan aksen emas" class="h-full w-full object-cover" fetchpriority="high">
+      </div>
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-night-950 via-night-950/25 to-transparent lg:bg-gradient-to-r lg:from-night-950 lg:via-night-950/40 lg:to-transparent"></div>
+      <div class="grain pointer-events-none absolute inset-0 opacity-[0.07] mix-blend-overlay" aria-hidden="true"></div>
+
+      <!-- the ladder: the subject of the page, placed inside the art -->
+      <div class="reveal d6 absolute inset-x-0 bottom-0 border-t border-white/10 bg-night-950/70 px-5 py-4 backdrop-blur-md sm:px-7">
+        <p class="text-[11px] font-semibold tracking-[0.14em] text-slate-500">Jenjang rank</p>
+        <ol class="track mt-3 overflow-x-auto pb-1 no-scrollbar" aria-label="Jenjang rank Mobile Legends">
+          <li class="track__node"><img class="track__emblem" src="assets/rank/gm.png" width="111" height="128" alt="" loading="lazy" decoding="async"><span class="track__name">GM</span></li>
+          <li class="track__link" aria-hidden="true"></li>
+          <li class="track__node"><img class="track__emblem" src="assets/rank/epic.png" width="110" height="128" alt="" loading="lazy" decoding="async"><span class="track__name">Epic</span></li>
+          <li class="track__link" aria-hidden="true"></li>
+          <li class="track__node"><img class="track__emblem" src="assets/rank/legend.png" width="104" height="128" alt="" loading="lazy" decoding="async"><span class="track__name">Legend</span></li>
+          <li class="track__link" aria-hidden="true"></li>
+          <li class="track__node is-active" data-track-tier="mythic"><img class="track__emblem" src="assets/rank/mythic.png" width="114" height="128" alt="" loading="lazy" decoding="async"><span class="track__name">Mythic</span></li>
+          <li class="track__link" aria-hidden="true"></li>
+          <li class="track__node"><img class="track__emblem" src="assets/rank/mythic-honor.png" width="114" height="128" alt="" loading="lazy" decoding="async"><span class="track__name">Honor</span></li>
+          <li class="track__link" aria-hidden="true"></li>
+          <li class="track__node is-peak"><img class="track__emblem" src="assets/rank/mythic-glory.png" width="106" height="128" alt="" loading="lazy" decoding="async"><span class="track__name">Glory</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PAKET (LADDER) ============================ -->
+<section id="paket" class="scroll-mt-24 border-t border-white/[0.07] py-16 lg:py-24">
+  <div class="mx-auto max-w-[80rem] px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-5 md:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] md:items-end">
+      <h2 class="display text-[clamp(1.8rem,3.6vw,2.6rem)] font-bold leading-[1.05] tracking-[-0.01em] text-white">Harga per bintang, naik per jenjang</h2>
+      <p class="measure-sm text-[1.0625rem] leading-relaxed text-slate-400">Semakin tinggi rank, semakin mahal per bintangnya karena matchmaking-nya makin berat. Pilih paket lalu isi jumlah bintang di formulir.</p>
+    </div>
+
+    <ol class="ladder mt-12" id="package-ladder">
+      <li class="ladder__row" data-tier="gm">
+        <span class="ladder__rail" aria-hidden="true"><span class="ladder__dot"></span></span>
+        <div class="ladder__body">
+          <div class="ladder__title"><img class="ladder__emblem" src="assets/rank/gm.png" width="111" height="128" alt="" loading="lazy" decoding="async"><h3 class="ladder__name">GM</h3><span class="ladder__tier">Grandmaster</span></div>
+          <p class="ladder__note">Paling ramah di dompet. Cocok buat bikin rank dulu sebelum nyoba tier atas.</p>
+        </div>
+        <p class="ladder__price"><span class="ladder__amount">Rp 5.000</span><span class="ladder__unit">per bintang</span></p>
+        <div class="ladder__action"><button type="button" class="btn btn-ghost js-pick-pkg" data-pkg="gm">Pilih GM</button></div>
+      </li>
+
+      <li class="ladder__row" data-tier="epic">
+        <span class="ladder__rail" aria-hidden="true"><span class="ladder__dot"></span></span>
+        <div class="ladder__body">
+          <div class="ladder__title"><img class="ladder__emblem" src="assets/rank/epic.png" width="110" height="128" alt="" loading="lazy" decoding="async"><h3 class="ladder__name">Epic</h3><span class="ladder__tier">Epic</span></div>
+          <p class="ladder__note">Sudah bisa masuk ranah kompetitif. Cocok kalau target kamu tembus Epic atau Legend.</p>
+        </div>
+        <p class="ladder__price"><span class="ladder__amount">Rp 6.000</span><span class="ladder__unit">per bintang</span></p>
+        <div class="ladder__action"><button type="button" class="btn btn-ghost js-pick-pkg" data-pkg="epic">Pilih Epic</button></div>
+      </li>
+
+      <li class="ladder__row" data-tier="legend">
+        <span class="ladder__rail" aria-hidden="true"><span class="ladder__dot"></span></span>
+        <div class="ladder__body">
+          <div class="ladder__title"><img class="ladder__emblem" src="assets/rank/legend.png" width="104" height="128" alt="" loading="lazy" decoding="async"><h3 class="ladder__name">Legend</h3><span class="ladder__tier">Legend</span></div>
+          <p class="ladder__note">Titik balik buat pemain yang sering mentok di Legend. Matchmaking-nya jauh lebih kompetitif.</p>
+        </div>
+        <p class="ladder__price"><span class="ladder__amount">Rp 7.000</span><span class="ladder__unit">per bintang</span></p>
+        <div class="ladder__action"><button type="button" class="btn btn-ghost js-pick-pkg" data-pkg="legend">Pilih Legend</button></div>
+      </li>
+
+      <li class="ladder__row is-active" data-tier="mythic">
+        <span class="ladder__rail" aria-hidden="true"><span class="ladder__dot"></span></span>
+        <div class="ladder__body">
+          <div class="ladder__title">
+            <img class="ladder__emblem" src="assets/rank/mythic.png" width="114" height="128" alt="" loading="lazy" decoding="async">
+            <h3 class="ladder__name">Mythic</h3>
+            <span class="ladder__tier">Mythic</span>
+            <span class="chip chip--cyan">Paling banyak dipilih</span>
+          </div>
+          <p class="ladder__note">Titik paling dicari dan paling cepat prosesnya. Order 10 bintang ke sini dapat bonus 2 bintang gratis.</p>
+        </div>
+        <p class="ladder__price"><span class="ladder__amount">Rp 12.000</span><span class="ladder__unit">per bintang</span></p>
+        <div class="ladder__action"><button type="button" class="btn btn-primary js-pick-pkg" data-pkg="mythic">Pilih Mythic</button></div>
+      </li>
+
+      <li class="ladder__row" data-tier="honor">
+        <span class="ladder__rail" aria-hidden="true"><span class="ladder__dot"></span></span>
+        <div class="ladder__body">
+          <div class="ladder__title"><img class="ladder__emblem" src="assets/rank/mythic-honor.png" width="114" height="128" alt="" loading="lazy" decoding="async"><h3 class="ladder__name">Mythic Honor</h3><span class="ladder__tier">Honor</span></div>
+          <p class="ladder__note">Bibit rank dijaga stabil, jadi hasil akhirnya lebih rapi dan rank-nya nggak gampang turun lagi.</p>
+        </div>
+        <p class="ladder__price"><span class="ladder__amount">Rp 15.000</span><span class="ladder__unit">per bintang</span></p>
+        <div class="ladder__action"><button type="button" class="btn btn-ghost js-pick-pkg" data-pkg="honor">Pilih Mythic Honor</button></div>
+      </li>
+
+      <li class="ladder__row is-peak" data-tier="glory">
+        <span class="ladder__rail" aria-hidden="true"><span class="ladder__dot"></span></span>
+        <div class="ladder__body">
+          <div class="ladder__title">
+            <img class="ladder__emblem" src="assets/rank/mythic-glory.png" width="106" height="128" alt="" loading="lazy" decoding="async">
+            <h3 class="ladder__name">Mythic Glory</h3>
+            <span class="ladder__tier">Glory</span>
+            <span class="chip chip--ember">Puncak ladder</span>
+          </div>
+          <p class="ladder__note">Handling khusus buat rank tinggi. Tim admin pakai strategi khusus biar poinnya nggak bocor.</p>
+        </div>
+        <p class="ladder__price"><span class="ladder__amount">Rp 20.000</span><span class="ladder__unit">per bintang</span></p>
+        <div class="ladder__action"><button type="button" class="btn btn-ghost js-pick-pkg" data-pkg="glory">Pilih Mythic Glory</button></div>
+      </li>
+    </ol>
+
+    <!-- Grading: a different kind of offer, so it gets a different shape -->
+    <div class="mt-10 flex flex-col gap-6 rounded-xl border border-ember-500/25 bg-night-900/60 p-6 sm:p-8 lg:flex-row lg:items-center lg:justify-between">
+      <div class="min-w-0">
+        <div class="flex flex-wrap items-center gap-3">
+          <h3 class="display text-xl font-bold text-white">Full Grading Mythic</h3>
+          <span class="chip chip--ember">10 match penuh</span>
+        </div>
+        <p class="measure-sm mt-2.5 text-sm leading-relaxed text-slate-400">Sekali order, 10 match langsung dikerjakan sampai Mythic. Buat kamu yang Males grinding satu-satu dan pengen rank langsung naik.</p>
+      </div>
+      <div class="flex flex-none flex-col items-start gap-4 lg:items-end">
+        <p class="num display text-3xl font-bold text-ember-400">Rp 150.000</p>
+        <button type="button" class="btn btn-ember js-pick-pkg" data-pkg="grading">Pilih paket grading</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ KEUNGGULAN (SPEC SHEET) ============================ -->
+<section id="kenapa" class="scroll-mt-24 border-t border-white/[0.07] py-16 lg:py-24">
+  <div class="mx-auto max-w-[80rem] px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-5 md:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] md:items-end">
+      <h2 class="display text-[clamp(1.8rem,3.6vw,2.6rem)] font-bold leading-[1.05] tracking-[-0.01em] text-white">Empat hal yang dijamin DS Store</h2>
+      <p class="measure-sm text-[1.0625rem] leading-relaxed text-slate-400">Setiap pesanan jalan dengan standar yang sama, apa pun rank targetnya.</p>
+    </div>
+
+    <div class="spec mt-12">
+      <div class="spec__row">
+        <span class="spec__icon">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 4.5 13.5H11L10 22l8.5-11.5H12L13 2Z"/></svg>
+        </span>
+        <div>
+          <h3 class="spec__title">Respon cepat</h3>
+          <p class="spec__body">Admin balas di bawah 10 menit selama jam layanan 08.00 sampai 23.00 WIB. Di luar jam itu, pesanan tetap masuk dan diproses pagi berikutnya.</p>
+        </div>
+      </div>
+      <div class="spec__row">
+        <span class="spec__icon">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+        </span>
+        <div>
+          <h3 class="spec__title">Progres kilat</h3>
+          <p class="spec__body">Satu bintang selesai sekitar 30 sampai 60 menit. Admin kirim update rank minimal dua kali sehari sampai target tercapai.</p>
+        </div>
+      </div>
+      <div class="spec__row">
+        <span class="spec__icon">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.4 3.4 8.4 8 9 4.6-.6 8-4.6 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+        </span>
+        <div>
+          <h3 class="spec__title">Amanah, data kembali utuh</h3>
+          <p class="spec__body">Data akun cuma dipakai sesuai instruksi, lalu dikembalikan lengkap dengan settingan awal kamu. Password tidak dibagikan ke siapa pun.</p>
+        </div>
+      </div>
+      <div class="spec__row">
+        <span class="spec__icon">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg>
+        </span>
+        <div>
+          <h3 class="spec__title">Harga di depan, tanpa tipu tipu</h3>
+          <p class="spec__body">Harga per bintang displayed apa adanya di halaman ini. Tidak ada biaya tersembunyi yang muncul di akhir pesanan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CARA PESAN (TIMELINE) ============================ -->
+<section id="cara" class="scroll-mt-24 border-t border-white/[0.07] py-16 lg:py-24">
+  <div class="mx-auto max-w-[80rem] px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-5 md:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] md:items-end">
+      <h2 class="display text-[clamp(1.8rem,3.6vw,2.6rem)] font-bold leading-[1.05] tracking-[-0.01em] text-white">Lima langkah, selesai dalam satu obrolan</h2>
+      <p class="measure-sm text-[1.0625rem] leading-relaxed text-slate-400">Tidak perlu bikin akun atau daftar dulu. Isi formulir, kirim, tunggu admin konfirmasi.</p>
+    </div>
+
+    <ol class="timeline mt-12">
+      <li class="timeline__step">
+        <span class="timeline__marker" aria-hidden="true">1</span>
+        <h3 class="timeline__title">Isi data akun</h3>
+        <p class="timeline__body">User ID, Zone ID, cara login, email atau nomor HP, password, dan nickname in-game.</p>
+      </li>
+      <li class="timeline__step">
+        <span class="timeline__marker" aria-hidden="true">2</span>
+        <h3 class="timeline__title">Pilih rank &amp; bintang</h3>
+        <p class="timeline__body">Tentukan rank target dari GM sampai Mythic Glory, lalu atur berapa bintang yang mau dinaikkan.</p>
+      </li>
+      <li class="timeline__step">
+        <span class="timeline__marker" aria-hidden="true">3</span>
+        <h3 class="timeline__title">Pasang promo</h3>
+        <p class="timeline__body">Kode <span class="font-semibold text-ember-400" translate="no">DSSTORE</span> memotong 10% dari subtotal. Bonus bintang otomatis dihitung.</p>
+      </li>
+      <li class="timeline__step">
+        <span class="timeline__marker" aria-hidden="true">4</span>
+        <h3 class="timeline__title">Bayar</h3>
+        <p class="timeline__body">QRIS, DANA, OVO, GoPay, ShopeePay, atau transfer ke BCA, BRI, dan Mandiri.</p>
+      </li>
+      <li class="timeline__step">
+        <span class="timeline__marker" aria-hidden="true">5</span>
+        <h3 class="timeline__title">Admin mulai joki</h3>
+        <p class="timeline__body">Kamu terima update progres, akun kembali utuh, dan pembayaran selesai. Semua lewat WhatsApp.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================ FORMULIR PEMESANAN ============================ -->
+<section id="pesan" class="scroll-mt-24 border-t border-white/[0.07] py-16 lg:py-24">
+  <div class="mx-auto max-w-[80rem] px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-5 md:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] md:items-end">
+      <h2 class="display text-[clamp(1.8rem,3.6vw,2.6rem)] font-bold leading-[1.05] tracking-[-0.01em] text-white">Formulir pemesanan</h2>
+      <p class="measure-sm text-[1.0625rem] leading-relaxed text-slate-400">Lima langkah singkat. Harga dihitung otomatis, dan pesanannya dikirim ke WhatsApp admin dalam hitungan detik.</p>
+    </div>
+
+    <div class="mt-12 grid gap-6 lg:grid-cols-[minmax(0,1fr)_21rem] lg:items-start">
+      <!-- ======== FORM ======== -->
+      <div class="overflow-hidden rounded-xl border border-white/[0.09] bg-night-900/50" style="overscroll-behavior:contain;">
+        <!-- stepper -->
+        <div class="border-b border-white/[0.07] bg-night-950/50 px-4 py-4 sm:px-7">
+          <ol id="stepper" class="flex items-start justify-between gap-1 sm:gap-3">
+            <li class="flex-1"><button type="button" class="step-tab w-full" data-step="1" aria-current="step"><span class="step-dot">1</span><span class="step-label">Data akun</span></button></li>
+            <li class="flex-1"><button type="button" class="step-tab w-full" data-step="2"><span class="step-dot">2</span><span class="step-label">Rank</span></button></li>
+            <li class="flex-1"><button type="button" class="step-tab w-full" data-step="3"><span class="step-dot">3</span><span class="step-label">Promo</span></button></li>
+            <li class="flex-1"><button type="button" class="step-tab w-full" data-step="4"><span class="step-dot">4</span><span class="step-label">Bayar</span></button></li>
+            <li class="flex-1"><button type="button" class="step-tab w-full" data-step="5"><span class="step-dot">5</span><span class="step-label">Kontak</span></button></li>
+          </ol>
+        </div>
+
+        <form id="order-form" novalidate>
+          <!-- ---------- STEP 1 ---------- -->
+          <div data-step-panel="1" class="p-5 sm:p-7">
+            <h3 class="display text-xl font-bold text-white">Data akun</h3>
+            <p class="measure-sm mt-1.5 text-sm leading-relaxed text-slate-400">Pastikan data ini benar, karena admin memakainya untuk masuk ke akun kamu.</p>
+
+            <div class="mt-7 grid gap-5 sm:grid-cols-2">
+              <div>
+                <label class="field-label" for="userId">User ID</label>
+                <input class="field" id="userId" name="userId" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" spellcheck="false" placeholder="Contoh 123456789&#8230;" aria-describedby="err-userId hint-userId">
+                <p id="hint-userId" class="field-hint">Tanpa spasi, hanya angka.</p>
+                <p id="err-userId" class="field-error" hidden><span aria-hidden="true">&#9888;</span><span></span></p>
+              </div>
+              <div>
+                <label class="field-label" for="zoneId">Zone ID</label>
+                <input class="field" id="zoneId" name="zoneId" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="off" spellcheck="false" placeholder="Contoh 1234&#8230;" aria-describedby="err-zoneId">
+                <p id="err-zoneId" class="field-error" hidden><span aria-hidden="true">&#9888;</span><span></span></p>
+              </div>
+              <div>
+                <label class="field-label" for="loginVia">Login via</label>
+                <select class="field" id="loginVia" name="loginVia" aria-describedby="err-loginVia">
+                  <option value="">Pilih cara login&#8230;</option>
+                  <option value="Moonton">Moonton</option>
+                  <option value="VK">VK</option>
+                  <option value="FB">Facebook</option>
+                  <option value="TikTok">TikTok</option>
+                </select>
+                <p id="err-loginVia" class="field-error" hidden><span aria-hidden="true">&#9888;</span><span></span></p>
+              </div>
+              <div>
+                <label class="field-label" for="emailHp">Email atau nomor HP akun</label>
+                <input class="field" id="emailHp" name="emailHp" type="text" autocomplete="off" spellcheck="false" placeholder="Contoh 0812&#8230; atau email@&#8230;" aria-describedby="err-emailHp">
+                <p id="err-emailHp" class="field-error" hidden><span aria-hidden="true">&#9888;</span><span></span></p>
+              </div>
+              <div class="sm:col-span-2">
+                <label class="field-label" for="password">Password akun</label>
+                <div class="relative">
+                  <input class="field pr-20" id="password" name="password" type="password" autocomplete="new-password" placeholder="Password akun kamu&#8230;" aria-describedby="err-password hint-password">
+                  <button type="button" id="toggle-password" class="absolute right-1 top-1/2 flex h-9 -translate-y-1/2 items-center rounded-md px-2.5 text-xs font-semibold text-brand-300 transition-colors duration-150 hover:bg-white/5 hover:text-brand-200" aria-label="Lihat password akun">Lihat</button>
+                </div>
+                <p id="hint-password" class="field-hint">Dipakai buat pengerjaan joki saja, nggak dibagikan ke pihak lain.</p>
+                <p id="err-password" class="field-error" hidden><span aria-hidden="true">&#9888;</span><span></span></p>
+              </div>
+              <div class="sm:col-span-2">
+                <label class="field-label" for="nickname">Nickname in-game</label>
+                <input class="field" id="nickname" name="nickname" type="text" autocomplete="off" spellcheck="false" placeholder="Contoh PlayerOne&#8230;" aria-describedby="err-nickname">
+                <p id="err-nickname" class="field-error" hidden><span aria-hidden="true">&#9888;</span><span></span></p>
+              </div>
+              <div class="sm:col-span-2">
+                <label class="field-label" for="catatan">Catatan: request hero atau spell</label>
+                <textarea class="field resize-y" id="catatan" name="catatan" rows="3" placeholder="Contoh: pakai hero Granger, spell Flicker dan Execute&#8230;" aria-describedby="err-catatan"></textarea>
+                <p id="err-catatan" class="field-error" hidden><span aria-hidden="true">&#9888;</span><span></span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ---------- STEP 2 ---------- -->
+          <div data-step-panel="2" class="p-5 sm:p-7" hidden>
+            <h3 class="display text-xl font-bold text-white">Rank target dan jumlah bintang</h3>
+            <p class="measure-sm mt-1.5 text-sm leading-relaxed text-slate-400">Pilih rank yang dituju, lalu tentukan berapa bintang yang mau dinaikkan.</p>
+
+            <div class="mt-7" id="rank-group" role="group" aria-labelledby="rank-label" aria-describedby="err-rank">
+              <p class="field-label mb-3" id="rank-label">Rank target</p>
+              <div class="grid gap-2.5" id="rank-grid">
+                <label class="choice choice--rank">
+                  <input type="radio" name="rank" value="gm" class="sr-only">
+                  <span class="choice__emblem" aria-hidden="true"><img src="assets/rank/gm.png" width="111" height="128" alt="" loading="lazy" decoding="async"></span>
+                  <span class="choice__mark" aria-hidden="true"></span>
+                  <span class="min-w-0"><span class="choice__title block">GM</span><span class="choice__meta block">Grandmaster</span></span>
+                  <span class="choice__price">Rp 5.000</span>
+                </label>
+                <label class="choice choice--rank">
+                  <input type="radio" name="rank" value="epic" class="sr-only">
+                  <span class="choice__emblem" aria-hidden="true"><img src="assets/rank/epic.png" width="110" height="128" alt="" loading="lazy" decoding="async"></span>
+                  <span class="choice__mark" aria-hidden="true"></span>
+                  <span class="min-w-0"><span class="choice__title block">Epic</span><span class="choice__meta block">Epic</span></span>
+                  <span class="choice__price">Rp 6.000</span>
+                </label>
+                <label class="choice choice--rank">
+                  <input type="radio" name="rank" value="legend" class="sr-only">
+                  <span class="choice__emblem" aria-hidden="true"><img src="assets/rank/legend.png" width="104" height="128" alt="" loading="lazy" decoding="async"></span>
+                  <span class="choice__mark" aria-hidden="true"></span>
+                  <span class="min-w-0"><span class="choice__title block">Legend</span><span class="choice__meta block">Legend</span></span>
+                  <span class="choice__price">Rp 7.000</span>
+                </label>
+                <label class="choice choice--rank">
+                  <input type="radio" name="rank" value="mythic" class="sr-only" checked>
+                  <span class="choice__emblem" aria-hidden="true"><img src="assets/rank/mythic.png" width="114" height="128" alt="" loading="lazy" decoding="async"></span>
+                  <span class="choice__mark" aria-hidden="true"></span>
+                  <span class="min-w-0"><span class="choice__title block">Mythic</span><span class="choice__meta block">Paling banyak dipilih</span></span>
+                  <span class="choice__price">Rp 12.000</span>
+                </label>
+                <label class="choice choice--rank">
+                  <input type="radio" name="rank" value="honor" class="sr-only">
+                  <span class="choice__emblem" aria-hidden="true"><img src="assets/rank/mythic-honor.png" width="114" height="128" alt="" loading="lazy" decoding="async"></span>
+                  <span class="choice__mark" aria-hidden="true"></span>
+                  <span class="min-w-0"><span class="choice__title block">Mythic Honor</span><span class="choice__meta block">Honor</span></span>
+                  <span class="choice__price">Rp 15.000</span>
+                </label>
+                <label class="choice choice--rank">
+                  <input type="radio" name="rank" value="glory" class="sr-only">
+                  <span class="choice__emblem" aria-hidden="true"><img src="assets/rank/mythic-glory.png" width="106" height="128" alt="" loading="lazy" decoding="async"></span>
+                  <span class="choice__mark" aria-hidden="true"></span>
+                  <span class="min-w-0"><span class="choice__title block">Mythic Glory</span><span class="choice__meta block">Puncak ladder</span></span>
+                  <span class="choice__price">Rp 20.000</span>
+                </label>
+                <label class="choice choice--rank">
+                  <input type="radio" name="rank" value="grading" class="sr-only">
+                  <span class="choice__emblem" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="text-ember-400"><path d="M12 3l7 3v5.2c0 4.4-3 8.2-7 9.8-4-1.6-7-5.4-7-9.8V6l7-3z"/><path d="M12 8.6l1.5 3.1 3.4.5-2.5 2.4.6 3.4-3-1.6-3 1.6.6-3.4-2.5-2.4 3.4-.5L12 8.6z"/></svg>
+                  </span>
+                  <span class="choice__mark" aria-hidden="true"></span>
+                  <span class="min-w-0"><span class="choice__title block">Full Grading Mythic</span><span class="choice__meta block">10 match, harga paket</span></span>
+                  <span class="choice__price">Rp 150.000</span>
+                </label>
+              </div>
+              <p id="err-rank" class="field-error" hidden><span aria-hidden="true">&#9888;</span><span></span></p>
+            </div>
+
+            <div class="mt-8 border-t border-white/[0.07] pt-7">
+              <label class="field-label" for="stars">Jumlah bintang</label>
+              <div class="flex flex-wrap items-center gap-3">
+                <button type="button" id="stars-minus" class="btn btn-ghost !h-11 !w-11 !p-0" aria-label="Kurangi jumlah bintang satu">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14"/></svg>
+                </button>
+                <input class="field num !w-20 !text-center !text-lg !font-bold" id="stars" name="stars" type="number" inputmode="numeric" min="1" max="100" step="1" value="10" aria-describedby="err-stars hint-stars">
+                <button type="button" id="stars-plus" class="btn btn-ghost !h-11 !w-11 !p-0" aria-label="Tambah jumlah bintang satu">
+                  <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+                </button>
+                <div class="flex flex-wrap gap-2">
+                  <button type="button" class="js-stars-preset rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-slate-300 transition-colors duration-150 hover:border-brand-400/50 hover:text-brand-200" data-stars="5">5 bintang</button>
+                  <button type="button" class="js-stars-preset rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-slate-300 transition-colors duration-150 hover:border-brand-400/50 hover:text-brand-200" data-stars="10">10 bintang</button>
+                  <button type="button" class="js-stars-preset rounded-md border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-slate-300 transition-colors duration-150 hover:border-brand-400/50 hover:text-brand-200" data-stars="20">20 bintang</button>
+                </div>
+              </div>
+              <p id="hint-stars" class="field-hint">Minimal 1, maksimal 100 bintang per order.</p>
+              <p id="err-stars" class="field-error" hidden><span aria-hidden="true">&#9888;</span><span></span></p>
+
+              <!-- the star meter: stars you can count, not a spinner -->
+              <div class="mt-5 rounded-lg border border-white/[0.09] bg-night-950/60 p-4">
+                <p class="text-[11px] font-semibold tracking-[0.14em] text-slate-500">Bintang yang akan dikumpulkan</p>
+                <div class="meter mt-2.5" id="star-meter" aria-hidden="true"></div>
+                <p class="mt-2.5 text-xs text-slate-400" id="star-meter-note"></p>
+              </div>
+
+              <p id="grading-note" class="mt-4 hidden rounded-lg border border-ember-500/25 bg-ember-500/10 px-4 py-3 text-sm text-ember-200" hidden>Paket Full Grading sudah include 10 match, jadi jumlah bintang nggak bisa diubah.</p>
+            </div>
+          </div>
+
+          <!-- ---------- STEP 3 ---------- -->
+          <div data-step-panel="3" class="p-5 sm:p-7" hidden>
+            <h3 class="display text-xl font-bold text-white">Promo dan bonus</h3>
+            <p class="measure-sm mt-1.5 text-sm leading-relaxed text-slate-400">Cek promo yang sedang jalan, lalu pasang kode voucher kalau ada.</p>
+
+            <div class="mt-7 flex items-start gap-3.5 rounded-lg border border-brand-400/30 bg-brand-500/10 p-4">
+              <span class="mt-0.5 flex h-9 w-9 flex-none items-center justify-center rounded-md bg-brand-500/20 text-brand-200">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12v9H4v-9"/><path d="M2 7h20v5H2z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7Zm0 0h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7Z"/></svg>
+              </span>
+              <div class="min-w-0">
+                <p class="display text-base font-bold text-brand-100">Order 10 bintang dapat bonus 2 bintang</p>
+                <p class="mt-1 text-sm leading-relaxed text-brand-200/80">Bonusnya nyalain sendiri begitu total bintang minimal 10. Nggak ada kode tambahan yang perlu dipakai.</p>
+              </div>
+            </div>
+
+            <div class="mt-7">
+              <label class="field-label" for="voucher">Kode voucher promo</label>
+              <div class="flex flex-col gap-3 sm:flex-row">
+                <input class="field uppercase sm:flex-1" id="voucher" name="voucher" type="text" autocomplete="off" spellcheck="false" placeholder="Masukkan kode, contoh DSSTORE&#8230;" aria-describedby="err-voucher hint-voucher">
+                <button type="button" id="apply-voucher" class="btn btn-ghost sm:w-auto">Pakai kode</button>
+              </div>
+              <p id="hint-voucher" class="field-hint">Kode aktif: <span class="font-semibold text-ember-400" translate="no">DSSTORE</span> &#8212; potongan 10% dari subtotal.</p>
+              <p id="err-voucher" class="field-error" hidden><span aria-hidden="true">&#9888;</span><span></span></p>
+              <p id="voucher-ok" class="mt-3 hidden items-center gap-2 rounded-lg border border-emerald-400/30 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-200" hidden>
+                <span aria-hidden="true">&#10003;</span><span>Kode <strong translate="no">DSSTORE</strong> terpasang. Potongan 10% sudah dipotong dari subtotal.</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- ---------- STEP 4 ---------- -->
+          <div data-step-panel="4" class="p-5 sm:p-7" hidden>
+            <h3 class="display text-xl font-bold text-white">Metode pembayaran</h3>
+            <p class="measure-sm mt-1.5 text-sm leading-relaxed text-slate-400">Pilih yang paling gampang buat kamu.</p>
+
+            <div class="mt-7" id="payment-group" role="group" aria-labelledby="payment-label" aria-describedby="err-payment">
+              <p class="field-label mb-3" id="payment-label">Bayar lewat</p>
+              <div class="grid gap-2.5 sm:grid-cols-2" id="payment-grid">
+                <label class="choice"><input type="radio" name="payment" value="QRIS" class="sr-only"><span class="choice__mark" aria-hidden="true"></span><span class="min-w-0"><span class="choice__title block">QRIS</span><span class="choice__meta block">Semua e-wallet dan m-banking</span></span></label>
+                <label class="choice"><input type="radio" name="payment" value="DANA" class="sr-only"><span class="choice__mark" aria-hidden="true"></span><span class="min-w-0"><span class="choice__title block">DANA</span><span class="choice__meta block">Saldo atau transfer</span></span></label>
+                <label class="choice"><input type="radio" name="payment" value="OVO" class="sr-only"><span class="choice__mark" aria-hidden="true"></span><span class="min-w-0"><span class="choice__title block">OVO</span><span class="choice__meta block">Saldo atau transfer</span></span></label>
+                <label class="choice"><input type="radio" name="payment" value="GoPay" class="sr-only"><span class="choice__mark" aria-hidden="true"></span><span class="min-w-0"><span class="choice__title block">GoPay</span><span class="choice__meta block">Saldo atau transfer</span></span></label>
+                <label class="choice"><input type="radio" name="payment" value="ShopeePay" class="sr-only"><span class="choice__mark" aria-hidden="true"></span><span class="min-w-0"><span class="choice__title block">ShopeePay</span><span class="choice__meta block">Saldo atau SPay</span></span></label>
+                <label class="choice"><input type="radio" name="payment" value="Transfer Bank BCA" class="sr-only"><span class="choice__mark" aria-hidden="true"></span><span class="min-w-0"><span class="choice__title block">Bank BCA</span><span class="choice__meta block">Transfer manual</span></span></label>
+                <label class="choice"><input type="radio" name="payment" value="Transfer Bank BRI" class="sr-only"><span class="choice__mark" aria-hidden="true"></span><span class="min-w-0"><span class="choice__title block">Bank BRI</span><span class="choice__meta block">Transfer manual</span></span></label>
+                <label class="choice"><input type="radio" name="payment" value="Transfer Bank Mandiri" class="sr-only"><span class="choice__mark" aria-hidden="true"></span><span class="min-w-0"><span class="choice__title block">Bank Mandiri</span><span class="choice__meta block">Transfer manual</span></span></label>
+              </div>
+              <p id="err-payment" class="field-error" hidden><span aria-hidden="true">&#9888;</span><span></span></p>
+            </div>
+
+            <p class="mt-6 rounded-lg border border-white/[0.09] bg-white/[0.02] px-4 py-3 text-sm leading-relaxed text-slate-400">Nomor QRIS dan rekening dikirim admin lewat WhatsApp setelah pesanan kamu dikonfirmasi.</p>
+          </div>
+
+          <!-- ---------- STEP 5 ---------- -->
+          <div data-step-panel="5" class="p-5 sm:p-7" hidden>
+            <h3 class="display text-xl font-bold text-white">Kontak pembeli</h3>
+            <p class="measure-sm mt-1.5 text-sm leading-relaxed text-slate-400">Nomor ini dipakai admin untuk kirim update progres joki ke kamu.</p>
+
+            <div class="mt-7 grid gap-5">
+              <div>
+                <label class="field-label" for="waPembeli">Nomor WhatsApp pembeli</label>
+                <input class="field" id="waPembeli" name="waPembeli" type="tel" inputmode="tel" autocomplete="tel" placeholder="Contoh 081234567890&#8230;" aria-describedby="err-waPembeli hint-waPembeli">
+                <p id="hint-waPembeli" class="field-hint">Format 08xx atau +62xx.</p>
+                <p id="err-waPembeli" class="field-error" hidden><span aria-hidden="true">&#9888;</span><span></span></p>
+              </div>
+
+              <div class="rounded-lg border border-white/[0.09] bg-night-950/60 p-4">
+                <h4 class="text-sm font-semibold text-white">Pratinjau pesan WhatsApp</h4>
+                <p class="mt-1 text-xs leading-relaxed text-slate-400">Inilah yang bakal terkirim ke admin. Data akun ikut disertakan biar langsung diproses.</p>
+                <pre id="wa-preview" class="num mt-3 max-h-56 overflow-auto whitespace-pre-wrap break-words rounded-md border border-white/[0.09] bg-black/40 p-3 text-xs leading-relaxed text-slate-300 no-scrollbar"></pre>
+              </div>
+
+              <div class="flex items-start gap-2.5">
+                <input type="checkbox" id="agree" name="agree" class="mt-0.5" aria-describedby="err-agree">
+                <label for="agree" class="label-pointer text-sm leading-relaxed text-slate-300">
+                  Data akun di atas sudah benar, dan saya setuju ketentuan DS STORE: akun diproses sesuai instruksi lalu dikembalikan utuh.
+                </label>
+              </div>
+              <p id="err-agree" class="field-error" hidden><span aria-hidden="true">&#9888;</span><span></span></p>
+            </div>
+          </div>
+
+          <!-- ---------- NAV ---------- -->
+          <div class="flex flex-col-reverse gap-3 border-t border-white/[0.07] bg-night-950/50 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-7">
+            <button type="button" id="btn-prev" class="btn btn-ghost w-full sm:w-auto" disabled>Kembali</button>
+            <div class="flex flex-col gap-3 sm:flex-row">
+              <button type="button" id="btn-next" class="btn btn-primary w-full sm:w-auto">Lanjut</button>
+              <a href="https://wa.me/6281807283181" id="wa-checkout" class="js-checkout btn btn-ember hidden w-full sm:w-auto" target="_blank" rel="noopener noreferrer">
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1 14.5-9.62 9.38 9.38 0 0 1-3.35 11.6l-.25.15-.3 8.06z"/></svg>
+                Kirim pesanan
+              </a>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- ======== TIKET RINGKASAN ======== -->
+      <aside class="lg:sticky lg:top-24" aria-labelledby="summary-title">
+        <div class="ticket p-5">
+          <h2 id="summary-title" class="text-sm font-semibold text-white">Ringkasan pesanan</h2>
+
+          <div class="mt-4 space-y-2.5">
+            <p class="ticket__row"><span class="ticket__key">Paket</span><span class="ticket__val" id="sum-pkg">&#8212;</span></p>
+            <p class="ticket__row"><span class="ticket__key">Harga satuan</span><span class="ticket__val" id="sum-unit">&#8212;</span></p>
+            <p class="ticket__row"><span class="ticket__key">Jumlah</span><span class="ticket__val" id="sum-qty">&#8212;</span></p>
+          </div>
+
+          <div class="mt-4 border-t border-white/[0.09] pt-4">
+            <p class="text-[11px] font-semibold tracking-[0.14em] text-slate-500">Bintang</p>
+            <div class="meter mt-2" id="star-meter-side" aria-hidden="true"></div>
+            <p class="mt-2 text-xs text-slate-400" id="sum-stars-note">&#8212;</p>
+          </div>
+
+          <div class="mt-4 space-y-2.5 border-t border-white/[0.09] pt-4">
+            <p class="ticket__row"><span class="ticket__key">Subtotal</span><span class="ticket__val" id="sum-subtotal">&#8212;</span></p>
+            <p class="ticket__row" id="sum-disc-row" hidden><span class="ticket__key text-ember-400">Diskon</span><span class="ticket__val text-ember-400" id="sum-disc">&#8212;</span></p>
+          </div>
+
+          <div class="ticket__dash mt-4 pt-4">
+            <div class="flex items-end justify-between gap-3">
+              <span class="text-sm font-semibold text-slate-300">Total bayar</span>
+              <span id="sum-total" class="num display text-2xl font-bold text-brand-300">Rp 0</span>
+            </div>
+            <p id="sum-note" class="mt-2 text-xs leading-relaxed text-slate-500">Belum termasuk biaya admin, dan biaya admin gratis.</p>
+          </div>
+
+          <div class="mt-5 space-y-2.5">
+            <a href="https://wa.me/6281807283181" id="wa-checkout-side" class="js-checkout btn btn-ember w-full" target="_blank" rel="noopener noreferrer">Kirim pesanan</a>
+            <button type="button" id="btn-copy" class="btn btn-ghost w-full">Salin ringkasan</button>
+          </div>
+        </div>
+
+        <div class="mt-4 rounded-lg border border-white/[0.09] bg-night-900/50 p-4">
+          <p class="text-xs font-semibold text-slate-300">Masih ragu?</p>
+          <p class="mt-1.5 text-xs leading-relaxed text-slate-400">Chat admin di WhatsApp <span class="num font-semibold text-white">081807283181</span> atau DM Instagram <span class="font-semibold text-white" translate="no">@dsstore_official</span>.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section id="faq" class="scroll-mt-24 border-t border-white/[0.07] py-16 lg:py-24">
+  <div class="mx-auto max-w-[80rem] px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-5 md:grid-cols-[minmax(0,20rem)_minmax(0,1fr)] md:items-end">
+      <h2 class="display text-[clamp(1.8rem,3.6vw,2.6rem)] font-bold leading-[1.05] tracking-[-0.01em] text-white">Yang sering ditanya</h2>
+      <p class="measure-sm text-[1.0625rem] leading-relaxed text-slate-400">Kalau belum ketemu jawabannya, tanya langsung ke admin. Jawabannya bisa cuma sebentar.</p>
+    </div>
+
+    <div class="mt-12 max-w-3xl" id="faq-list">
+      <details class="faq-item">
+        <summary class="flex items-center justify-between gap-4 py-4 text-[15px] font-semibold text-white">
+          <span>Berapa lama proses joki rank selesai?</span>
+          <svg class="faq-chevron h-4 w-4 flex-none text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="faq-panel pb-5 text-sm leading-relaxed text-slate-400">
+          <p>Satu bintang biasanya selesai 30 sampai 60 menit. Untuk paket Full Grading Mythic 10 match, prosesnya bisa memakan 1 sampai 2 hari tergantung antrean dan matchmaking. Admin kasih estimasi terbaru begitu pesanan dikonfirmasi.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="flex items-center justify-between gap-4 py-4 text-[15px] font-semibold text-white">
+          <span>Apakah data akun aman dan dikembalikan utuh?</span>
+          <svg class="faq-chevron h-4 w-4 flex-none text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="faq-panel pb-5 text-sm leading-relaxed text-slate-400">
+          <p>Ya. Data akun cuma dipakai untuk menjalankan proses joki sesuai instruksi, lalu dikembalikan lengkap dengan settingan awal kamu. Demi keamanan, password akun nggak pernah dibagikan ke pihak lain.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="flex items-center justify-between gap-4 py-4 text-[15px] font-semibold text-white">
+          <span>Cara pakai kode promo <span translate="no">DSSTORE</span> gimana?</span>
+          <svg class="faq-chevron h-4 w-4 flex-none text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="faq-panel pb-5 text-sm leading-relaxed text-slate-400">
+          <p>Di step 3 formulir, ketik <span class="font-semibold text-ember-400" translate="no">DSSTORE</span> lalu klik “Pakai kode”. Potongan 10% langsung kepotong dari subtotal dan ikut tercantum di ringkasan serta pesan WhatsApp yang dikirim ke admin.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="flex items-center justify-between gap-4 py-4 text-[15px] font-semibold text-white">
+          <span>Apakah bonus 2 bintang berlaku otomatis?</span>
+          <svg class="faq-chevron h-4 w-4 flex-none text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="faq-panel pb-5 text-sm leading-relaxed text-slate-400">
+          <p>Ya. Begitu jumlah bintang yang dipesan mencapai 10 atau lebih, dua bintang bonus langsung menyala di meter bintang dan masuk ke ringkasan. Nggak ada kode atau pengajuan tambahan yang perlu dilakukan.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="flex items-center justify-between gap-4 py-4 text-[15px] font-semibold text-white">
+          <span>Metode pembayaran apa aja yang diterima?</span>
+          <svg class="faq-chevron h-4 w-4 flex-none text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="faq-panel pb-5 text-sm leading-relaxed text-slate-400">
+          <p>QRIS, DANA, OVO, GoPay, ShopeePay, plus transfer manual ke BCA, BRI, dan Mandiri. Nomor QRIS dan rekening dikirim admin lewat WhatsApp setelah pesanan dikonfirmasi.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="flex items-center justify-between gap-4 py-4 text-[15px] font-semibold text-white">
+          <span>Bisa request hero atau spell tertentu?</span>
+          <svg class="faq-chevron h-4 w-4 flex-none text-brand-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </summary>
+        <div class="faq-panel pb-5 text-sm leading-relaxed text-slate-400">
+          <p>Bisa. Tulis request hero dan konfigurasi spell di kolom Catatan pada step 1. Admin mengikuti instruksi semaksimal mungkin, tergantung ketersediaan draft dan situasi match.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PENUTUP ============================ -->
+<section class="border-t border-white/[0.07] py-16 lg:py-20">
+  <div class="mx-auto max-w-[80rem] px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-start gap-8 lg:flex-row lg:items-center lg:justify-between">
+      <div class="min-w-0">
+        <h2 class="display text-[clamp(1.8rem,3.6vw,2.6rem)] font-bold leading-[1.05] tracking-[-0.01em] text-white">Siap naik rank Season 42?</h2>
+        <p class="measure-sm mt-3 text-[1.0625rem] leading-relaxed text-slate-400">Isi formulirnya, cek harga yang muncul, lalu kirim ke admin. Rank naik, akun tetap aman.</p>
+      </div>
+      <div class="flex w-full flex-col gap-3 sm:flex-row lg:w-auto lg:flex-none">
+        <a href="#pesan" class="btn btn-primary w-full sm:w-auto">Buka formulir pemesanan</a>
+        <a href="https://wa.me/6281807283181" target="_blank" rel="noopener noreferrer" class="btn btn-ghost w-full sm:w-auto">Chat admin WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer id="kontak" class="border-t border-white/[0.07] bg-night-950/70 pb-28 pt-14 lg:pb-14">
+  <div class="mx-auto max-w-[80rem] px-4 sm:px-6 lg:px-8">
+    <div class="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+      <div class="min-w-0">
+        <div class="flex items-center gap-2.5">
+          <span class="flex h-10 w-10 flex-none items-center justify-center overflow-hidden rounded-lg border border-ember-500/30 bg-night-900">
+            <img src="assets/ds-store-logo.jpg" width="40" height="40" alt="Logo DS STORE" class="h-full w-full object-cover" loading="lazy">
+          </span>
+          <span class="display text-lg font-bold tracking-wide text-white" translate="no">DS STORE</span>
+        </div>
+        <p class="measure-sm mt-4 text-sm leading-relaxed text-slate-400">Joki rank <span translate="no">Mobile Legends</span> Season 42 dengan standar layanan yang cepat, transparan, dan amanah. Melayani dari GM sampai Mythic Glory.</p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <a href="https://wa.me/6281807283181" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/[0.04] px-3 py-2 text-sm font-semibold text-slate-200 transition-colors duration-150 hover:border-brand-400/50 hover:text-white">
+            <svg class="h-4 w-4 text-brand-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1 14.5-9.62 9.38 9.38 0 0 1-3.35 11.6l-.25.15-.3 8.06z"/></svg>
+            <span class="num">081807283181</span>
+          </a>
+          <a href="https://www.instagram.com/dsstore_officia?dlrf=MWZ1NGhsbzFreTR5cA==" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/[0.04] px-3 py-2 text-sm font-semibold text-slate-200 transition-colors duration-150 hover:border-ember-400/50 hover:text-white">
+            <svg class="h-4 w-4 text-ember-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            <span translate="no">@dsstore_official</span>
+          </a>
+        </div>
+      </div>
+
+      <nav aria-label="Tautan paket">
+        <h2 class="text-sm font-semibold text-white">Paket</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="#paket" class="text-slate-400 transition-colors duration-150 hover:text-brand-300">Joki akun GM</a></li>
+          <li><a href="#paket" class="text-slate-400 transition-colors duration-150 hover:text-brand-300">Joki akun Epic</a></li>
+          <li><a href="#paket" class="text-slate-400 transition-colors duration-150 hover:text-brand-300">Joki akun Legend</a></li>
+          <li><a href="#paket" class="text-slate-400 transition-colors duration-150 hover:text-brand-300">Joki akun Mythic</a></li>
+          <li><a href="#paket" class="text-slate-400 transition-colors duration-150 hover:text-brand-300">Mythic Honor dan Glory</a></li>
+          <li><a href="#paket" class="text-slate-400 transition-colors duration-150 hover:text-brand-300">Full Grading Mythic</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="text-sm font-semibold text-white">Jam layanan</h2>
+        <ul class="mt-4 space-y-2.5 text-sm text-slate-400">
+          <li class="num">Senin sampai Minggu, 08.00 sampai 23.00 WIB</li>
+          <li class="num">Rata-rata dibalas 10 menit</li>
+          <li>Update progres 2 sampai 3 kali sehari</li>
+        </ul>
+        <p class="mt-4 rounded-lg border border-ember-500/20 bg-ember-500/10 px-4 py-3 text-xs leading-relaxed text-ember-200/90">Promo Season 42 berlaku terbatas. Harga dan ketersediaan slot bisa berubah sewaktu-waktu.</p>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/[0.07] pt-6 sm:flex-row">
+      <p class="text-xs text-slate-500">&#169; <span id="year">2026</span> <span translate="no">DS STORE</span>. Semua hak dilindungi.</p>
+      <p class="text-xs text-slate-500">Respon cepat, progres kilat, 100% amanah.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================ BAR PESANAN (SELULER) ============================ -->
+<div class="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-night-950/95 backdrop-blur-lg lg:hidden" style="padding-bottom:env(safe-area-inset-bottom,0px);">
+  <div class="flex items-center gap-3 px-4 py-3">
+    <div class="min-w-0 flex-1">
+      <p class="text-[11px] font-medium text-slate-500">Total bayar</p>
+      <p id="sum-total-mobile" class="num display truncate text-lg font-bold text-brand-300">Rp 0</p>
+    </div>
+    <a href="https://wa.me/6281807283181" id="wa-checkout-mobile" class="js-checkout btn btn-ember !px-5 !py-3" target="_blank" rel="noopener noreferrer">Kirim pesanan</a>
+  </div>
+</div>
+
+<!-- ============================ TOMBOL WHATSAPP ============================ -->
+<a href="https://wa.me/6281807283181?text=Halo%20Admin%20DS%20STORE%2C%20saya%20mau%20tanya%20paket%20joki%20rank%20Season%2042." target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp DS STORE" class="fixed bottom-24 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 text-white shadow-plate transition-transform duration-150 hover:scale-105 lg:bottom-6">
+  <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.28.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.4 9.4 0 0 1-4.79-1.31l-.34-.2-3.56.93.95-3.47-.22-.36a9.38 9.38 0 0 1 14.5-9.62 9.38 9.38 0 0 1-3.35 11.6l-.25.15-.3 8.06z"/></svg>
+</a>
+
+<!-- ============================ TOAST ============================ -->
+<div id="toast" role="status" aria-live="polite" class="w-[calc(100%-2rem)] max-w-sm rounded-lg border border-brand-400/30 bg-night-900/95 px-4 py-3 text-sm font-medium text-white shadow-plate backdrop-blur"></div>
+
+<!-- ============================ LIVE REGION ============================ -->
+<p id="live-status" role="status" aria-live="polite" class="sr-only"></p>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ============================================================
+     KONFIGURASI
+     ============================================================ */
+  const WA_NUMBER = '6281807283181';
+  const IG_HANDLE = '@dsstore_official';
+  const BONUS_THRESHOLD = 10;
+  const BONUS_STARS = 2;
+
+  const PACKAGES = {
+    gm:      { id:'gm',      label:'GM',                  tier:'Grandmaster',  unit:5000,   perStar:true  },
+    epic:    { id:'epic',    label:'Epic',                tier:'Epic',         unit:6000,   perStar:true  },
+    legend:  { id:'legend',  label:'Legend',              tier:'Legend',       unit:7000,   perStar:true  },
+    mythic:  { id:'mythic',  label:'Mythic',              tier:'Mythic',       unit:12000,  perStar:true  },
+    honor:   { id:'honor',   label:'Mythic Honor',        tier:'Honor',        unit:15000,  perStar:true  },
+    glory:   { id:'glory',   label:'Mythic Glory',        tier:'Glory',        unit:20000,  perStar:true  },
+    grading: { id:'grading', label:'Full Grading Mythic', tier:'Full Grading', unit:150000, perStar:false, stars:10 }
+  };
+
+  const VOUCHERS = { DSSTORE: { code:'DSSTORE', percent:10 } };
+
+  const idr = new Intl.NumberFormat('id-ID', {
+    style:'currency', currency:'IDR', minimumFractionDigits:0, maximumFractionDigits:0
+  });
+  const plain = new Intl.NumberFormat('id-ID');
+
+  /* ============================================================
+     STATE
+     ============================================================ */
+  const state = { step:1, pkg:'mythic', stars:10, voucher:null, payment:null, bonusSeen:false };
+
+  const $  = (sel, root) => (root || document).querySelector(sel);
+  const $$ = (sel, root) => Array.prototype.slice.call((root || document).querySelectorAll(sel));
+
+  const rankGroup    = $('#rank-group');
+  const paymentGroup = $('#payment-group');
+
+  const el = {
+    form:         $('#order-form'),
+    panels:       $$('[data-step-panel]'),
+    stepTabs:     $$('.step-tab'),
+    btnPrev:      $('#btn-prev'),
+    btnNext:      $('#btn-next'),
+    inlineCheckout: $('#wa-checkout'),
+    checkout:     $$('.js-checkout'),
+    starsInput:   $('#stars'),
+    starsMinus:   $('#stars-minus'),
+    starsPlus:    $('#stars-plus'),
+    gradingNote:  $('#grading-note'),
+    voucherInput: $('#voucher'),
+    applyVoucher: $('#apply-voucher'),
+    voucherOk:    $('#voucher-ok'),
+    preview:      $('#wa-preview'),
+    liveStatus:   $('#live-status'),
+    toast:        $('#toast'),
+    copyBtn:      $('#btn-copy'),
+    meters:       [$('#star-meter'), $('#star-meter-side')]
+  };
+
+  /* ============================================================
+     UTILITAS
+     ============================================================ */
+  function val(id) {
+    const node = document.getElementById(id);
+    return node ? node.value.trim() : '';
+  }
+
+  function showToast(message) {
+    if (!el.toast) return;
+    el.toast.textContent = message;
+    el.toast.classList.add('is-visible');
+    window.clearTimeout(showToast._t);
+    showToast._t = window.setTimeout(function () { el.toast.classList.remove('is-visible'); }, 3400);
+  }
+
+  function announce(text) {
+    if (el.liveStatus) el.liveStatus.textContent = text;
+  }
+
+  function setError(id, message, target) {
+    const box = document.getElementById('err-' + id);
+    if (!box) return;
+    const input = target || document.getElementById(id);
+    const span = box.querySelector('span:last-child');
+    if (message) {
+      if (input) input.setAttribute('aria-invalid', 'true');
+      if (span) span.textContent = message;
+      box.hidden = false;
+    } else {
+      if (input) input.removeAttribute('aria-invalid');
+      if (span) span.textContent = '';
+      box.hidden = true;
+    }
+  }
+
+  function focusFirstError() {
+    const bad = document.querySelector('#order-form [aria-invalid="true"]');
+    if (!bad) return;
+    const focusable = bad.matches('input,select,textarea,button,a[href]')
+      ? bad
+      : bad.querySelector('input:not([disabled]),select:not([disabled]),textarea,button,a[href]');
+    if (focusable) {
+      focusable.focus({ preventScroll: true });
+      focusable.scrollIntoView({ block:'center', behavior:'smooth' });
+    }
+  }
+
+  function scrollToSection(id) {
+    const node = document.getElementById(id);
+    if (!node) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    node.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block:'start' });
+  }
+
+  /* ============================================================
+     PERHITUNGAN
+     ============================================================ */
+  function getBonusStars() {
+    const pkg = PACKAGES[state.pkg];
+    if (!pkg || !pkg.perStar) return 0;
+    return state.stars >= BONUS_THRESHOLD ? BONUS_STARS : 0;
+  }
+
+  function computeTotals() {
+    const pkg = PACKAGES[state.pkg];
+    const qty = pkg.perStar ? state.stars : pkg.stars;
+    const subtotal = pkg.perStar ? pkg.unit * qty : pkg.unit;
+    const bonusStars = getBonusStars();
+
+    let discount = 0;
+    let voucherLabel = '';
+    if (state.voucher && VOUCHERS[state.voucher]) {
+      discount = Math.round(subtotal * (VOUCHERS[state.voucher].percent / 100));
+      voucherLabel = VOUCHERS[state.voucher].code;
+    }
+
+    return {
+      pkg: pkg, qty: qty, unit: pkg.unit, subtotal: subtotal,
+      bonusStars: bonusStars, totalStars: qty + bonusStars,
+      discount: discount, voucherLabel: voucherLabel,
+      total: subtotal - discount
+    };
+  }
+
+  /* ============================================================
+     METER BINTANG (elemen paling khas)
+     ============================================================ */
+  function renderMeter(t) {
+    const ordered = t.qty;
+    const bonus = t.bonusStars;
+    const total = ordered + bonus;
+    const shown = Math.min(24, Math.max(total, 10));
+
+    let html = '';
+    for (let i = 0; i < shown; i++) {
+      if (i < ordered) html += '<span class="meter__pip meter__pip--on">&#9733;</span>';
+      else if (i < total)   html += '<span class="meter__pip meter__pip--bonus">&#9733;</span>';
+      else                 html += '<span class="meter__pip">&#9733;</span>';
+    }
+    if (total > shown) html += '<span class="meter__more">+' + (total - shown) + '</span>';
+
+    const ignite = bonus > 0 && !state.bonusSeen;
+    if (bonus > 0) state.bonusSeen = true;
+    if (bonus === 0) state.bonusSeen = false;
+
+    el.meters.forEach(function (meter) {
+      if (!meter) return;
+      meter.innerHTML = html;
+      meter.classList.toggle('is-bonus', bonus > 0);
+      if (ignite) {
+        // ulangi animasi saat bonus baru dinyalakan
+        meter.classList.remove('is-bonus');
+        void meter.offsetWidth;
+        meter.classList.add('is-bonus');
+      }
+    });
+  }
+
+  /* ============================================================
+     RENDER RINGKASAN
+     ============================================================ */
+  let lastAnnounced = '';
+
+  function render() {
+    const t = computeTotals();
+
+    $('#sum-pkg').textContent      = t.pkg.label;
+    $('#sum-unit').textContent     = idr.format(t.unit);
+    $('#sum-qty').textContent      = t.pkg.perStar ? plain.format(t.qty) + ' bintang' : t.qty + ' match';
+    $('#sum-subtotal').textContent = idr.format(t.subtotal);
+    $('#sum-total').textContent    = idr.format(t.total);
+    $('#sum-total-mobile').textContent = idr.format(t.total);
+
+    const discRow = $('#sum-disc-row');
+    if (t.discount > 0) {
+      discRow.hidden = false;
+      $('#sum-disc').textContent = '-' + idr.format(t.discount) + ' (' + t.voucherLabel + ')';
+    } else {
+      discRow.hidden = true;
+    }
+
+    const starsNote = t.bonusStars > 0
+      ? plain.format(t.qty) + ' bintang + bonus ' + plain.format(t.bonusStars) + ' = ' + plain.format(t.totalStars) + ' bintang'
+      : plain.format(t.qty) + ' bintang. Bonus 2 bintang gratis mulai order ' + BONUS_THRESHOLD + ' bintang.';
+    $('#sum-stars-note').textContent = starsNote;
+    const meterNote = $('#star-meter-note');
+    if (meterNote) meterNote.textContent = t.bonusStars > 0
+      ? 'Bonus ' + plain.format(t.bonusStars) + ' bintang gratis sudah nyala. Total ' + plain.format(t.totalStars) + ' bintang.'
+      : 'Order ' + BONUS_THRESHOLD + ' bintang atau lebih, dapat bonus ' + BONUS_STARS + ' bintang gratis.';
+
+    $('#sum-note').textContent = t.bonusStars > 0
+      ? 'Harga ini sudah termasuk bonus ' + plain.format(t.bonusStars) + ' bintang gratis.'
+      : 'Belum termasuk biaya admin, dan biaya admin gratis.';
+
+    renderMeter(t);
+
+    updateMessage(t);
+
+    const summary = 'Total ' + plain.format(t.totalStars) + ' bintang. Total bayar ' + idr.format(t.total) + '.';
+    if (summary !== lastAnnounced) {
+      lastAnnounced = summary;
+      announce(summary);
+    }
+  }
+
+  /* ============================================================
+     PESAN WHATSAPP
+     ============================================================ */
+  function updateMessage(t) {
+    const msg = buildMessage(t);
+    if (el.preview) el.preview.textContent = msg;
+    const href = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg);
+    el.checkout.forEach(function (link) { link.setAttribute('href', href); });
+    return msg;
+  }
+
+  function buildMessage(t) {
+    const pkg = t.pkg;
+    const lines = [];
+
+    lines.push('*DS STORE - PROMO JOKI AKUN SEASON 42*');
+    lines.push('Halo Admin DS STORE, saya mau pesan joki rank:');
+    lines.push('');
+    lines.push('*DATA AKUN*');
+    lines.push('User ID    : ' + (val('userId') || '-'));
+    lines.push('Zone ID    : ' + (val('zoneId') || '-'));
+    lines.push('Login via  : ' + (val('loginVia') || '-'));
+    lines.push('Email / HP : ' + (val('emailHp') || '-'));
+    lines.push('Password   : ' + (val('password') || '-'));
+    lines.push('Nickname   : ' + (val('nickname') || '-'));
+    lines.push('Catatan    : ' + (val('catatan') || '-'));
+    lines.push('');
+    lines.push('*PAKET PESANAN*');
+    lines.push('Rank       : ' + pkg.label + (pkg.tier && pkg.tier !== pkg.label ? ' (' + pkg.tier + ')' : ''));
+    lines.push('Harga      : ' + idr.format(pkg.unit) + (pkg.perStar ? ' / bintang' : ' / paket'));
+    lines.push('Jumlah     : ' + plain.format(t.qty) + (pkg.perStar ? ' bintang' : ' match'));
+    if (t.bonusStars > 0) {
+      lines.push('Bonus      : +' + plain.format(t.bonusStars) + ' bintang gratis (total ' + plain.format(t.totalStars) + ' bintang)');
+    }
+    lines.push('Subtotal   : ' + idr.format(t.subtotal));
+    if (t.discount > 0) {
+      lines.push('Diskon     : -' + idr.format(t.discount) + ' (kode ' + t.voucherLabel + ')');
+    }
+    lines.push('*TOTAL     : ' + idr.format(t.total) + '*');
+    lines.push('');
+    lines.push('*PEMBAYARAN*');
+    lines.push('Metode     : ' + (state.payment || '-'));
+    lines.push('');
+    lines.push('*KONTAK PEMBELI*');
+    lines.push('WhatsApp   : ' + (val('waPembeli') || '-'));
+    lines.push('Instagram  : ' + IG_HANDLE);
+    lines.push('');
+    lines.push('Mohon dikonfirmasi ya Kak. Terima kasih!');
+    return lines.join('\n');
+  }
+
+  /* ============================================================
+     VALIDASI
+     ============================================================ */
+  const validators = {
+    1: function () {
+      let ok = true;
+      const uid = val('userId');
+      if (!uid) { setError('userId', 'User ID wajib diisi.'); ok = false; }
+      else if (!/^\d{4,20}$/.test(uid)) { setError('userId', 'User ID hanya boleh angka, minimal 4 digit.'); ok = false; }
+      else setError('userId', '');
+
+      const zid = val('zoneId');
+      if (!zid) { setError('zoneId', 'Zone ID wajib diisi.'); ok = false; }
+      else if (!/^\d{1,6}$/.test(zid)) { setError('zoneId', 'Zone ID hanya boleh angka.'); ok = false; }
+      else setError('zoneId', '');
+
+      if (!val('loginVia')) { setError('loginVia', 'Pilih salah satu cara login.'); ok = false; }
+      else setError('loginVia', '');
+
+      if (!val('emailHp')) { setError('emailHp', 'Email atau nomor HP akun wajib diisi.'); ok = false; }
+      else setError('emailHp', '');
+
+      if (!val('password')) { setError('password', 'Password akun wajib diisi supaya admin bisa memproses pesanan.'); ok = false; }
+      else setError('password', '');
+
+      setError('nickname', '');
+      setError('catatan', '');
+      return ok;
+    },
+    2: function () {
+      let ok = true;
+      if (!state.pkg) { setError('rank', 'Pilih rank target dulu.', rankGroup); ok = false; }
+      else setError('rank', '', rankGroup);
+
+      const pkg = PACKAGES[state.pkg];
+      if (pkg && !pkg.perStar) {
+        setError('stars', '');
+      } else {
+        const s = state.stars;
+        if (!Number.isFinite(s) || s < 1) { setError('stars', 'Jumlah bintang minimal 1.'); ok = false; }
+        else if (s > 100) { setError('stars', 'Jumlah bintang maksimal 100 per order.'); ok = false; }
+        else setError('stars', '');
+      }
+      return ok;
+    },
+    3: function () { setError('voucher', ''); return true; },
+    4: function () {
+      if (!state.payment) { setError('payment', 'Pilih salah satu metode pembayaran.', paymentGroup); return false; }
+      setError('payment', '', paymentGroup);
+      return true;
+    },
+    5: function () {
+      let ok = true;
+      const wa = val('waPembeli').replace(/[\s-]/g, '');
+      if (!wa) { setError('waPembeli', 'Nomor WhatsApp pembeli wajib diisi.'); ok = false; }
+      else if (!/^(\+62|62|0)\d{8,14}$/.test(wa)) { setError('waPembeli', 'Format nomor belum tepat. Pakai 08xx atau +62xx.'); ok = false; }
+      else setError('waPembeli', '');
+
+      if (!$('#agree').checked) { setError('agree', 'Centang pernyataan ini sebelum mengirim pesanan.'); ok = false; }
+      else setError('agree', '');
+      return ok;
+    }
+  };
+
+  function validateAll() {
+    for (let step = 1; step <= 5; step++) {
+      if (!validators[step]()) return step;
+    }
+    return null;
+  }
+
+  /* ============================================================
+     NAVIGASI STEP
+     ============================================================ */
+  function goToStep(step, opts) {
+    const options = opts || {};
+    const next = Math.min(5, Math.max(1, step));
+    state.step = next;
+
+    el.panels.forEach(function (panel) {
+      panel.hidden = Number(panel.getAttribute('data-step-panel')) !== next;
+    });
+
+    el.stepTabs.forEach(function (tab) {
+      const n = Number(tab.getAttribute('data-step'));
+      if (n === next) {
+        tab.setAttribute('aria-current', 'step');
+        tab.removeAttribute('data-state');
+      } else {
+        tab.removeAttribute('aria-current');
+        if (n < next) tab.setAttribute('data-state', 'done');
+        else tab.removeAttribute('data-state');
+      }
+    });
+
+    el.btnPrev.disabled = next === 1;
+    el.btnNext.classList.toggle('hidden', next === 5);
+    el.inlineCheckout.classList.toggle('hidden', next !== 5);
+
+    syncUrl(next);
+
+    if (options.focus) {
+      const heading = el.panels[next - 1].querySelector('h3');
+      if (heading) {
+        heading.setAttribute('tabindex', '-1');
+        heading.focus({ preventScroll: true });
+      }
+    }
+  }
+
+  function syncUrl(step) {
+    try {
+      const url = new URL(window.location.href);
+      url.searchParams.set('step', String(step));
+      window.history.replaceState(null, '', url.toString());
+    } catch (err) { /* abaikan bila URL tidak bisa diubah */ }
+  }
+
+  /* ============================================================
+     EVENT
+     ============================================================ */
+  el.stepTabs.forEach(function (tab) {
+    tab.addEventListener('click', function () { goToStep(Number(tab.getAttribute('data-step')), { focus:true }); });
+  });
+
+  el.btnPrev.addEventListener('click', function () { goToStep(state.step - 1, { focus:true }); });
+
+  el.btnNext.addEventListener('click', function () {
+    if (!validators[state.step]()) {
+      focusFirstError();
+      showToast('Lengkapi dulu data yang masih kurang.');
+      return;
+    }
+    goToStep(state.step + 1, { focus:true });
+  });
+
+  // rank
+  $$('input[name="rank"]').forEach(function (radio) {
+    radio.addEventListener('change', function () {
+      state.pkg = radio.value;
+      const pkg = PACKAGES[state.pkg];
+      const locked = !pkg.perStar;
+      if (locked) {
+        state.stars = pkg.stars;
+        el.starsInput.value = String(pkg.stars);
+      }
+      el.starsInput.disabled = locked;
+      el.starsMinus.disabled = locked;
+      el.starsPlus.disabled = locked;
+      $$('.js-stars-preset').forEach(function (b) { b.disabled = locked; });
+      el.gradingNote.hidden = !locked;
+      el.gradingNote.classList.toggle('hidden', !locked);
+      setError('rank', '', rankGroup);
+      // sorot baris paket yang dipilih di halaman paket
+      $$('#package-ladder .ladder__row').forEach(function (row) {
+        row.classList.toggle('is-active', row.getAttribute('data-tier') === state.pkg);
+      });
+      render();
+    });
+  });
+
+  // pilih paket dari daftar harga
+  $$('.js-pick-pkg').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const id = btn.getAttribute('data-pkg');
+      const radio = document.querySelector('input[name="rank"][value="' + id + '"]');
+      if (radio) {
+        radio.checked = true;
+        radio.dispatchEvent(new Event('change', { bubbles:true }));
+      }
+      goToStep(2, { focus:true });
+      scrollToSection('pesan');
+      showToast('Paket ' + PACKAGES[id].label + ' dipilih. Atur jumlah bingungnya.');
+    });
+  });
+
+  // jumlah bintang
+  function setStars(next) {
+    const pkg = PACKAGES[state.pkg];
+    if (pkg && !pkg.perStar) return;
+    let value = parseInt(next, 10);
+    if (!Number.isFinite(value)) value = 1;
+    value = Math.min(100, Math.max(1, value));
+    state.stars = value;
+    el.starsInput.value = String(value);
+    setError('stars', '');
+    render();
+  }
+
+  el.starsMinus.addEventListener('click', function () { setStars(state.stars - 1); });
+  el.starsPlus.addEventListener('click', function () { setStars(state.stars + 1); });
+  el.starsInput.addEventListener('input', function () {
+    const value = parseInt(el.starsInput.value, 10);
+    state.stars = Number.isFinite(value) ? Math.min(100, Math.max(1, value)) : 1;
+    render();
+  });
+  el.starsInput.addEventListener('change', function () { setStars(el.starsInput.value); });
+  $$('.js-stars-preset').forEach(function (btn) {
+    btn.addEventListener('click', function () { setStars(btn.getAttribute('data-stars')); });
+  });
+
+  // voucher
+  function applyVoucher() {
+    const code = (el.voucherInput.value || '').trim().toUpperCase();
+    if (!code) {
+      state.voucher = null;
+      el.voucherOk.hidden = true;
+      el.voucherOk.classList.add('hidden');
+      el.voucherOk.classList.remove('flex');
+      setError('voucher', 'Ketik kode voucher dulu, contoh DSSTORE.');
+      return;
+    }
+    if (VOUCHERS[code]) {
+      state.voucher = code;
+      el.voucherInput.value = code;
+      setError('voucher', '');
+      el.voucherOk.hidden = false;
+      el.voucherOk.classList.remove('hidden');
+      el.voucherOk.classList.add('flex');
+      render();
+      showToast('Kode ' + code + ' terpasang, potongan 10% sudah dipotong.');
+    } else {
+      state.voucher = null;
+      el.voucherOk.hidden = true;
+      el.voucherOk.classList.add('hidden');
+      el.voucherOk.classList.remove('flex');
+      setError('voucher', 'Kode "' + code + '" belum dikenali. Tanya admin untuk kode terbaru.');
+    }
+  }
+  el.applyVoucher.addEventListener('click', applyVoucher);
+  el.voucherInput.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') { event.preventDefault(); applyVoucher(); }
+  });
+
+  // pembayaran
+  $$('input[name="payment"]').forEach(function (radio) {
+    radio.addEventListener('change', function () {
+      state.payment = radio.value;
+      setError('payment', '', paymentGroup);
+      render();
+    });
+  });
+
+  // kirim pesanan
+  el.checkout.forEach(function (link) {
+    link.addEventListener('click', function (event) {
+      const bad = validateAll();
+      if (bad !== null) {
+        event.preventDefault();
+        goToStep(bad, { focus:false });
+        focusFirstError();
+        showToast('Lengkapi dulu data di step ' + bad + '.');
+        return;
+      }
+      showToast('Membuka WhatsApp dengan ringkasan pesanan.');
+    });
+  });
+
+  el.form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const bad = validateAll();
+    if (bad !== null) {
+      goToStep(bad, { focus:false });
+      focusFirstError();
+      showToast('Lengkapi dulu data di step ' + bad + '.');
+    }
+  });
+
+  // salin ringkasan
+  el.copyBtn.addEventListener('click', function () {
+    const msg = buildMessage(computeTotals());
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(msg).then(function () {
+        showToast('Ringkasan pesanan tersalin.');
+      }).catch(function () {
+        showToast('Gagal menyalin. Select teks pratinjaunya lalu salin manual.');
+      });
+    } else {
+      showToast('Clipboard tidak tersedia di browser ini.');
+    }
+  });
+
+  // tampilkan/sembunyikan password
+  const pwToggle = $('#toggle-password');
+  const pwField  = $('#password');
+  if (pwToggle && pwField) {
+    pwToggle.addEventListener('click', function () {
+      const show = pwField.type === 'password';
+      pwField.type = show ? 'text' : 'password';
+      pwToggle.setAttribute('aria-label', show ? 'Sembunyikan password akun' : 'Lihat password akun');
+      pwToggle.textContent = show ? 'Sembunyikan' : 'Lihat';
+    });
+  }
+
+  // navigasi seluler
+  const navToggle = $('#nav-toggle');
+  const mobileNav = $('#mobile-nav');
+  const iconOpen = $('#nav-icon-open');
+  const iconClose = $('#nav-icon-close');
+
+  function setNav(open) {
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    navToggle.setAttribute('aria-label', open ? 'Tutup menu navigasi' : 'Buka menu navigasi');
+    mobileNav.classList.toggle('hidden', !open);
+    iconOpen.classList.toggle('hidden', open);
+    iconClose.classList.toggle('hidden', !open);
+  }
+  navToggle.addEventListener('click', function () {
+    setNav(navToggle.getAttribute('aria-expanded') !== 'true');
+  });
+  $$('#mobile-nav a').forEach(function (link) {
+    link.addEventListener('click', function () { setNav(false); });
+  });
+
+  // FAQ: satu panel terbuka pada satu waktu
+  const faqItems = $$('#faq-list details');
+  faqItems.forEach(function (item) {
+    item.addEventListener('toggle', function () {
+      const panel = item.querySelector('.faq-panel');
+      if (!panel) return;
+      if (item.open) {
+        panel.classList.add('is-open');
+        faqItems.forEach(function (other) {
+          if (other !== item) {
+            other.open = false;
+            const p = other.querySelector('.faq-panel');
+            if (p) p.classList.remove('is-open');
+          }
+        });
+      } else {
+        panel.classList.remove('is-open');
+      }
+    });
+  });
+
+  // bersihkan error saat field diubah
+  $$('#order-form input, #order-form select, #order-form textarea').forEach(function (input) {
+    input.addEventListener('input', function () {
+      if (input.getAttribute('aria-invalid') === 'true') setError(input.id, '');
+    });
+  });
+
+  // pratinjau pesan dan tautan WhatsApp ikut diperbarui saat data akun diketik
+  el.form.addEventListener('input', function () {
+    updateMessage(computeTotals());
+  });
+
+  /* ============================================================
+     HEADER BANNER CAROUSEL
+     auto-play, tombol prev/next, dot indicator, hover pause,
+     transisi mulus (slide + fade), swipe di layar sentuh
+     ============================================================ */
+  (function bannerCarousel() {
+    const scope = $('#banner-carousel');
+    const root  = scope ? scope.querySelector('#banner') : null;
+    if (!root) return;
+
+    const slides = $$('[data-banner-slide]', root);
+    const dots   = $$('[data-banner-dot]', scope);
+    const prevBtn = $('[data-banner-prev]', root);
+    const nextBtn = $('[data-banner-next]', root);
+    const bar      = scope.querySelector('.banner__bar');
+    const eyebrowEl = $('[data-banner-eyebrow]', scope);
+    const titleEl   = $('[data-banner-title]', scope);
+    const liveEl    = $('[data-banner-live]', scope);
+    if (slides.length < 2) return;
+
+    const DELAY = 4200;                       // 4 detik per slide (dalam 3-5 detik)
+    const reduceMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let index = 0;
+    let timer = null;
+    let hovering = false;
+    let focused = false;
+
+    function sync() {
+      slides.forEach(function (slide, i) {
+        slide.setAttribute('aria-hidden', i === index ? 'false' : 'true');
+      });
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle('is-active', i === index);
+        if (i === index) dot.setAttribute('aria-current', 'true');
+        else dot.removeAttribute('aria-current');
+      });
+      const cur = slides[index];
+      const label = cur.getAttribute('data-title') || '';
+      if (eyebrowEl) eyebrowEl.textContent = cur.getAttribute('data-eyebrow') || '';
+      if (titleEl) titleEl.textContent = label;
+      if (liveEl) liveEl.textContent = label + '. Slide ' + (index + 1) + ' dari ' + slides.length + '.';
+    }
+
+    function show(target, dir) {
+      target = (target + slides.length) % slides.length;
+      if (target === index) return;
+
+      const cur = slides[index];
+      const nxt = slides[target];
+
+      // slide baru mulai dari luar layar, slide lama keluar ke arah sebaliknya
+      nxt.classList.remove('from-left', 'from-right');
+      nxt.classList.add(dir > 0 ? 'from-right' : 'from-left');
+      void nxt.offsetWidth;                  // kunci posisi awal supaya transisinya jalan
+      cur.classList.remove('is-active');
+      cur.classList.add(dir > 0 ? 'from-left' : 'from-right');
+      nxt.classList.remove('from-right', 'from-left');
+      nxt.classList.add('is-active');
+
+      index = target;
+      sync();
+      window.setTimeout(function () { cur.classList.remove('from-left', 'from-right'); }, 800);
+    }
+
+    function go(dir) { show(index + dir, dir); }
+
+    function stop() {
+      if (timer) { window.clearInterval(timer); timer = null; }
+    }
+
+    function start() {
+      stop();
+      if (reduceMQ.matches || hovering || focused || document.hidden) return;
+      timer = window.setInterval(function () { go(1); }, DELAY);
+    }
+
+    prevBtn.addEventListener('click', function () { go(-1); start(); });
+    nextBtn.addEventListener('click', function () { go(1); start(); });
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        if (i !== index) show(i, i > index ? 1 : -1);
+        start();
+      });
+    });
+
+    // hover pause: berhenti saat kursor diarahkan ke banner, jalan lagi saat keluar
+    const hoverTargets = bar ? [root, bar] : [root];
+    hoverTargets.forEach(function (node) {
+      node.addEventListener('mouseenter', function () { hovering = true; stop(); });
+      node.addEventListener('mouseleave', function () { hovering = false; start(); });
+    });
+    // fokus keyboard juga menjeda (selama fokus masih di dalam komponen)
+    scope.addEventListener('focusin', function () { focused = true; stop(); });
+    scope.addEventListener('focusout', function (event) {
+      if (event.relatedTarget && scope.contains(event.relatedTarget)) return;
+      focused = false; start();
+    });
+    root.addEventListener('keydown', function (event) {
+      if (event.key === 'ArrowLeft')  { event.preventDefault(); go(-1); start(); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); go(1);  start(); }
+    });
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) stop(); else start();
+    });
+    if (reduceMQ.addEventListener) {
+      reduceMQ.addEventListener('change', start);
+    }
+
+    // geser dengan jari di layar sentuh
+    let touchX = null;
+    root.addEventListener('touchstart', function (event) {
+      touchX = event.touches[0].clientX;
+    }, { passive:true });
+    root.addEventListener('touchend', function (event) {
+      if (touchX === null) return;
+      const dx = event.changedTouches[0].clientX - touchX;
+      if (Math.abs(dx) > 45) go(dx < 0 ? 1 : -1);
+      touchX = null;
+      start();
+    }, { passive:true });
+
+    sync();
+    start();
+  })();
+
+  /* ============================================================
+     INIT
+     ============================================================ */
+  const yearNode = $('#year');
+  if (yearNode) yearNode.textContent = String(new Date().getFullYear());
+
+  let initialStep = 1;
+  try {
+    const params = new URL(window.location.href).searchParams;
+    const s = parseInt(params.get('step'), 10);
+    if (Number.isFinite(s) && s >= 1 && s <= 5) initialStep = s;
+  } catch (err) { /* abaikan */ }
+
+  const defaultStars = parseInt(el.starsInput.value, 10);
+  state.stars = Number.isFinite(defaultStars) ? defaultStars : 10;
+
+  render();
+  goToStep(initialStep);
+})();
+</script>
+
+</body>
+</html>
