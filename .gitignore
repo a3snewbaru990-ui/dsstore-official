@@ -1,0 +1,25 @@
+# Dependencies & build output
+node_modules/
+dist/
+.parcel-cache/
+.vite/
+*.tsbuildinfo
+
+# Dev-only copy of the shared images (see dsstore-web/scripts/sync-assets.mjs)
+dsstore-web/assets/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local env
+.env
+.env.local
+
+# Unrelated leftovers from another project (anime music-video prompt pack +
+# audio analysis output) - not referenced by index.html
+assets/art/
+assets/timeline.json
+assets/merry-christmas-please-dont-call.mp3
