@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { OrderProvider } from "@/hooks/order-context";
 import { SiteHeader } from "@/components/site-header";
 import { Hero } from "@/components/hero";
@@ -17,6 +17,68 @@ import { Toaster } from "@/components/ui/sonner";
 
 export default function App() {
   const [tab, setTab] = useState<"transaksi" | "keterangan">("transaksi");
+
+  /*
+   * Di layar kecil, bagian "keterangan" disembunyikan saat tab "transaksi"
+   * aktif. Tanpa ini, tautan navbar ke #kenapa, #cara, #deskripsi, dan #faq
+   * tidak menggeser halaman karena targetnya masih display:none.
+   */
+  useEffect(() => {
+    const SECTION_TAB: Record<string, "transaksi" | "keterangan"> = {
+      paket: "transaksi",
+      pesan: "transaksi",
+      kenapa: "keterangan",
+      cara: "keterangan",
+      deskripsi: "keterangan",
+      faq: "keterangan",
+    };
+
+    const scrollToId = (id: string) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const top = el.getBoundingClientRect().top + window.scrollY - 84;
+      window.scrollTo({ top, behavior: reduce ? "auto" : "smooth" });
+    };
+
+    const onClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement | null;
+      const anchor = target
+        ? target.closest<HTMLAnchorElement>("a[href^='#']")
+        : null;
+      if (!anchor) return;
+      const id = anchor.getAttribute("href")?.slice(1);
+      if (!id || id === "main") return;
+      const nextTab = SECTION_TAB[id];
+      if (!nextTab) return;
+
+      event.preventDefault();
+      setTab(nextTab);
+      try {
+        const url = new URL(window.location.href);
+        url.hash = id;
+        window.history.replaceState(null, "", url.toString());
+      } catch {
+        /* abaikan bila URL tidak bisa diubah */
+      }
+      // Menu seluler (Radix Sheet) mengunci scroll body selama animasi tutup,
+      // jadi beri waktu sebelum menggulir. Selain itu cukup tunggu render tab.
+      if (document.querySelector('[role="dialog"]')) {
+        window.setTimeout(() => scrollToId(id), 380);
+      } else {
+        window.requestAnimationFrame(() => {
+          window.requestAnimationFrame(() => scrollToId(id));
+        });
+      }
+    };
+
+    document.addEventListener("click", onClick);
+
+    const initial = window.location.hash.slice(1);
+    if (initial && SECTION_TAB[initial]) setTab(SECTION_TAB[initial]);
+
+    return () => document.removeEventListener("click", onClick);
+  }, []);
 
   return (
     <OrderProvider>

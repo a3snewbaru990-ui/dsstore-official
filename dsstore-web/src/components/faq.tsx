@@ -13,7 +13,7 @@ export function Faq() {
       <div className="shell">
         <SectionHeading
           title="Pertanyaan yang sering ditanya"
-          desc="Kalau masih ada yang mengganjal, langsung chat admin ya."
+          desc="Jika masih ada yang mengganjal, langsung hubungi admin."
         />
 
         <div className="mt-8 grid gap-4 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start">
@@ -30,12 +30,12 @@ export function Faq() {
             ))}
           </Accordion>
 
-          <div className="rounded-xl border border-border bg-card/60 p-5 shadow-card">
+          <div className="rounded-xl border border-border bg-card p-5 shadow-card">
             <p className="text-base font-bold uppercase tracking-wide text-ink">
               Ada pertanyaan lain?
             </p>
             <p className="mt-2 text-sm leading-relaxed text-ink-mute">
-              Admin-fast response Jam 08.00 sampai 23.00 WIB. Di luar jam itu, chat tetap
+              Admin merespons cepat pada jam 08.00 sampai 23.00 WIB. Di luar jam itu, chat tetap
               masuk dan dibalas pagi berikutnya.
             </p>
             <a

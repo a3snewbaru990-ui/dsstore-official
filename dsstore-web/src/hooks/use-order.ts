@@ -40,6 +40,19 @@ export type Totals = {
 
 export const TOTAL_STEPS = 6;
 
+/**
+ * Which error keys belong to which step. Used to clear a step's stale errors
+ * before applying a fresh validation pass.
+ */
+const STEP_ERROR_KEYS: Record<number, ErrorKey[]> = {
+  1: ["userId", "zoneId", "loginVia", "emailHp", "password"],
+  2: ["rank"],
+  3: ["stars"],
+  4: ["voucher"],
+  5: ["payment"],
+  6: ["waPembeli", "agree"],
+};
+
 const EMPTY_VALUES: Values = {
   userId: "",
   zoneId: "",
@@ -52,11 +65,22 @@ const EMPTY_VALUES: Values = {
   agree: false,
 };
 
+/** Placeholder so consumers always get a Pkg object before the user chooses. */
+const NO_PKG: Pkg = {
+  id: "",
+  label: "Belum dipilih",
+  short: "—",
+  tier: "",
+  unit: 0,
+  perStar: true,
+  note: "",
+};
+
 export function useOrder() {
   const [step, setStep] = useState(1);
   const [values, setValues] = useState<Values>(EMPTY_VALUES);
   const [errors, setErrors] = useState<Errors>({});
-  const [pkgId, setPkgId] = useState("mythic");
+  const [pkgId, setPkgId] = useState("");
   const [stars, setStarsState] = useState(10);
   const [voucher, setVoucher] = useState<string | null>(null);
   const [payment, setPayment] = useState<string | null>(null);
@@ -67,9 +91,10 @@ export function useOrder() {
   const formRef = useRef<HTMLFormElement | null>(null);
 
   const pkg = useMemo(
-    () => PACKAGES.find((p) => p.id === pkgId) ?? PACKAGES[3],
+    () => PACKAGES.find((p) => p.id === pkgId) ?? NO_PKG,
     [pkgId],
   );
+  const hasPkg = pkgId !== "";
 
   const setValue = useCallback((key: keyof Values, value: string | boolean) => {
     setValues((prev) => ({ ...prev, [key]: value }) as Values);
@@ -94,13 +119,14 @@ export function useOrder() {
   /* Perhitungan                                                        */
   /* ------------------------------------------------------------------ */
   const totals: Totals = useMemo(() => {
-    const qty = pkg.perStar ? stars : (pkg.stars ?? 0);
-    const subtotal = pkg.perStar ? pkg.unit * qty : pkg.unit;
-    const bonusStars = pkg.perStar && stars >= BONUS_THRESHOLD ? BONUS_STARS : 0;
+    const qty = !hasPkg ? 0 : pkg.perStar ? stars : (pkg.stars ?? 0);
+    const subtotal = !hasPkg ? 0 : pkg.perStar ? pkg.unit * qty : pkg.unit;
+    const bonusStars =
+      hasPkg && pkg.perStar && stars >= BONUS_THRESHOLD ? BONUS_STARS : 0;
 
     let discount = 0;
     let voucherLabel = "";
-    if (voucher && VOUCHERS[voucher]) {
+    if (hasPkg && voucher && VOUCHERS[voucher]) {
       discount = Math.round(subtotal * (VOUCHERS[voucher].percent / 100));
       voucherLabel = VOUCHERS[voucher].code;
     }
@@ -116,7 +142,7 @@ export function useOrder() {
       voucherLabel,
       total: subtotal - discount,
     };
-  }, [pkg, stars, voucher]);
+  }, [pkg, hasPkg, stars, voucher]);
 
   useEffect(() => {
     const on = totals.bonusStars > 0;
@@ -130,7 +156,7 @@ export function useOrder() {
   const message = useMemo(() => {
     const lines: string[] = [];
     lines.push("*DS STORE - PROMO JOKI AKUN SEASON 42*");
-    lines.push("Halo Admin DS STORE, saya mau pesan joki rank:");
+    lines.push("Halo Admin DS STORE, saya ingin memesan joki rank:");
     lines.push("");
     lines.push("*DATA AKUN*");
     lines.push(`User ID    : ${values.userId || "-"}`);
@@ -143,13 +169,25 @@ export function useOrder() {
     lines.push("");
     lines.push("*PAKET PESANAN*");
     lines.push(
-      `Rank       : ${pkg.label}${pkg.tier && pkg.tier !== pkg.label ? ` (${pkg.tier})` : ""}`,
+      `Rank       : ${
+        hasPkg
+          ? `${pkg.label}${pkg.tier && pkg.tier !== pkg.label ? ` (${pkg.tier})` : ""}`
+          : "-"
+      }`,
     );
     lines.push(
-      `Harga      : ${idr.format(pkg.unit)}${pkg.perStar ? " / bintang" : " / paket"}`,
+      `Harga      : ${
+        hasPkg
+          ? `${idr.format(pkg.unit)}${pkg.perStar ? " / bintang" : " / paket"}`
+          : "-"
+      }`,
     );
     lines.push(
-      `Jumlah     : ${plain.format(totals.qty)}${pkg.perStar ? " bintang" : " match"}`,
+      `Jumlah     : ${
+        hasPkg
+          ? `${plain.format(totals.qty)}${pkg.perStar ? " bintang" : " match"}`
+          : "-"
+      }`,
     );
     if (totals.bonusStars > 0) {
       lines.push(
@@ -169,9 +207,9 @@ export function useOrder() {
     lines.push(`WhatsApp   : ${values.waPembeli || "-"}`);
     lines.push(`Instagram  : ${IG_HANDLE}`);
     lines.push("");
-    lines.push("Mohon dikonfirmasi ya Kak. Terima kasih!");
+    lines.push("Mohon dikonfirmasi. Terima kasih!");
     return lines.join("\n");
-  }, [values, pkg, totals, payment]);
+  }, [values, pkg, hasPkg, totals, payment]);
 
   const checkoutHref = useMemo(
     () => `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`,
@@ -202,14 +240,14 @@ export function useOrder() {
       }
 
       if (target === 2) {
-        if (!pkgId) next.rank = "Pilih rank target dulu.";
+        if (!pkgId) next.rank = "Pilih rank target terlebih dahulu.";
       }
 
       if (target === 3) {
-        if (pkg.perStar) {
+        if (hasPkg && pkg.perStar) {
           if (!Number.isFinite(stars) || stars < 1)
             next.stars = "Jumlah bintang minimal 1.";
-          else if (stars > 100) next.stars = "Jumlah bintang maksimal 100 per order.";
+          else if (stars > 100) next.stars = "Jumlah bintang maksimal 100 per pesanan.";
         }
       }
 
@@ -221,20 +259,23 @@ export function useOrder() {
         const wa = values.waPembeli.replace(/[\s-]/g, "");
         if (!wa) next.waPembeli = "Nomor WhatsApp pembeli wajib diisi.";
         else if (!/^(\+62|62|0)\d{8,14}$/.test(wa))
-          next.waPembeli = "Format nomor belum tepat. Pakai 08xx atau +62xx.";
+          next.waPembeli = "Format nomor belum tepat. Gunakan 08xx atau +62xx.";
         if (!values.agree)
           next.agree = "Centang pernyataan ini sebelum mengirim pesanan.";
       }
 
+      // Clear this step's stale errors, then apply the fresh results. The old
+      // version merged `next` into `prev` and immediately deleted those same
+      // keys, so navigation was blocked without ever explaining why.
       setErrors((prev) => {
-        const merged = { ...prev, ...next };
-        Object.keys(next).forEach((k) => delete merged[k as ErrorKey]);
-        return merged;
+        const merged = { ...prev };
+        (STEP_ERROR_KEYS[target] ?? []).forEach((k) => delete merged[k]);
+        return { ...merged, ...next };
       });
 
       return Object.keys(next).length === 0;
     },
-    [values, pkgId, pkg, stars, payment],
+    [values, pkgId, pkg, hasPkg, stars, payment],
   );
 
   const validateAll = useCallback((): number | null => {
@@ -330,7 +371,7 @@ export function useOrder() {
       const code = raw.trim().toUpperCase();
       if (!code) {
         setVoucher(null);
-        return { ok: false, message: "Ketik kode voucher dulu, contoh DSSTORE." };
+        return { ok: false, message: "Ketik kode voucher terlebih dahulu, contoh DSSTORE." };
       }
       if (VOUCHERS[code]) {
         setVoucher(code);
@@ -343,7 +384,7 @@ export function useOrder() {
       setVoucher(null);
       return {
         ok: false,
-        message: `Kode "${code}" belum dikenali. Tanya admin untuk kode terbaru.`,
+        message: `Kode "${code}" belum dikenali. Tanyakan ke admin untuk kode terbaru.`,
       };
     },
     [clearError],
@@ -362,9 +403,11 @@ export function useOrder() {
   /* ------------------------------------------------------------------ */
   useEffect(() => {
     setAnnouncement(
-      `Total ${plain.format(totals.totalStars)} bintang. Total bayar ${idr.format(totals.total)}.`,
+      hasPkg
+        ? `Total ${plain.format(totals.totalStars)} bintang. Total bayar ${idr.format(totals.total)}.`
+        : "Belum ada paket dipilih.",
     );
-  }, [totals.totalStars, totals.total]);
+  }, [hasPkg, totals.totalStars, totals.total]);
 
   /* ------------------------------------------------------------------ */
   /* Bagian awal dari query string                                        */
@@ -385,6 +428,7 @@ export function useOrder() {
     errors,
     pkg,
     pkgId,
+    hasPkg,
     stars,
     voucher,
     payment,

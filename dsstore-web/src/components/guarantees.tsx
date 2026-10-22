@@ -15,14 +15,14 @@ export function Guarantees() {
       <div className="shell">
         <SectionHeading
           title="Kenapa harus lewat DS Store"
-          desc="Empat hal yang kamipegang di setiap order, apa pun rank targetnya."
+          desc="Empat hal yang kami pegang di setiap pesanan, apa pun rank targetnya."
         />
 
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {GUARANTEES.map((g) => (
             <Card
               key={g.title}
-              className="border-border/70 bg-card/60 shadow-card backdrop-blur-[2px]"
+              className="border-border bg-card shadow-card"
             >
               <CardHeader className="space-y-0 p-5">
                 <span className="mb-3 flex h-11 w-11 items-center justify-center rounded-lg bg-lemon text-[#15130b]">

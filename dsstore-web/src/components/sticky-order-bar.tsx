@@ -11,11 +11,17 @@ export function StickyOrderBar() {
       <div className="shell flex items-center gap-3 py-2.5">
         <div className="min-w-0 flex-1">
           <p className="truncate text-[11px] font-medium text-ink-mute">
-            {order.totals.pkg.label} &middot; {order.totals.qty}{" "}
-            {order.totals.pkg.perStar ? "bintang" : "match"}
+            {order.hasPkg ? (
+              <>
+                {order.totals.pkg.label} &middot; {order.totals.qty}{" "}
+                {order.totals.pkg.perStar ? "bintang" : "match"}
+              </>
+            ) : (
+              "Pilih paket dulu"
+            )}
           </p>
           <p className="num truncate text-base font-bold text-ink">
-            {idr.format(total)}
+            {order.hasPkg ? idr.format(total) : "—"}
           </p>
         </div>
         <a
@@ -33,7 +39,7 @@ export function StickyOrderBar() {
           }}
         >
           <Icon name="send" className="h-4 w-4" />
-          Pesan Sekarang!
+          Pesan Sekarang
         </a>
       </div>
     </div>

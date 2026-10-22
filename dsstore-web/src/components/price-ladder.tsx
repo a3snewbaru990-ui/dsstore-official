@@ -18,7 +18,11 @@ export function PriceLadder() {
     setPicking(id);
     order.selectPackage(id);
     order.scrollToStep(2, { focus: true });
-    toast.success(`Paket ${pkg.label} dipilih. Atur jumlah bingungnya.`);
+    toast.success(
+      pkg.perStar
+        ? `Paket ${pkg.label} dipilih. Atur jumlah bintangnya.`
+        : `Paket ${pkg.label} dipilih. Lanjutkan mengisi data akun.`,
+    );
   };
 
   return (
@@ -26,7 +30,7 @@ export function PriceLadder() {
       <div className="shell">
         <SectionHeading
           title="Harga per bintang, naik per jenjang"
-          desc="Semakin tinggi rank, semakin mahal per bintangnya karena matchmaking-nya makin berat. Pilih paket dulu, atur jumlahnya di formulir."
+          desc="Semakin tinggi rank, semakin mahal harga per bintang karena matchmaking-nya semakin berat. Pilih paket terlebih dahulu, lalu atur jumlahnya di formulir."
         />
 
         <div className="panel mt-8 overflow-hidden">

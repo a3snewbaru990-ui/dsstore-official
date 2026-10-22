@@ -54,6 +54,13 @@
     @apply border-border;
   }
 
+  /* The UA rule `[hidden] { display: none }` loses against author classes that
+     set `display` (e.g. `.field-error { display: flex }`), which left every
+     error message + icon permanently visible. Keep `hidden` authoritative. */
+  [hidden] {
+    display: none !important;
+  }
+
   html {
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
@@ -178,7 +185,7 @@
   }
 
   .choice__mark {
-    @apply block h-[1.05rem] w-[1.05rem] flex-none rounded-full border-2 border-ink-faint/70 bg-card/80 transition-colors duration-150;
+    @apply block h-[1.05rem] w-[1.05rem] flex-none rounded-full border-2 border-ink-faint/70 bg-card transition-colors duration-150;
   }
 
   .choice.is-selected .choice__mark,

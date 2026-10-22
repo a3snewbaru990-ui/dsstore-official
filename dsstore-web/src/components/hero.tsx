@@ -42,7 +42,7 @@ export function Hero() {
                 <p className="measure mt-2.5 text-sm leading-relaxed text-paper/70">
                   Rank{" "}
                   <span className="font-semibold text-paper">Mobile Legends</span> kamu
-                  naikin tanpa ribet. Admin masuk, kamu pantau progresnya, akun kembali
+                  naik tanpa repot. Admin masuk, kamu memantau progresnya, akun kembali
                   utuh. Mulai{" "}
                   <span className="font-semibold text-lemon">Rp 5.000</span> per bintang.
                 </p>
@@ -63,7 +63,7 @@ export function Hero() {
                 className="w-full border-white/25 bg-transparent text-paper hover:bg-white/10 hover:text-paper xl:w-auto"
               >
                 <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
-                  Tanya admin dulu
+                  Tanyakan ke admin
                 </a>
               </Button>
             </div>

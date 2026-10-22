@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Icon } from "@/components/icon";
 import { Button } from "@/components/ui/button";
 import {
@@ -12,6 +13,8 @@ import { images } from "@/lib/assets";
 import { NAV_LINKS, WA_LINK } from "@/lib/data";
 
 export function SiteHeader() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-deep/95 backdrop-blur-xl">
       <div className="shell flex items-center gap-3 py-2.5">
@@ -54,7 +57,7 @@ export function SiteHeader() {
           </a>
         </Button>
 
-        <Sheet>
+        <Sheet open={menuOpen} onOpenChange={setMenuOpen}>
           <SheetTrigger asChild>
             <Button
               variant="outline"
@@ -79,6 +82,7 @@ export function SiteHeader() {
                 <a
                   key={link.href}
                   href={link.href}
+                  onClick={() => setMenuOpen(false)}
                   className="rounded-lg px-3 py-2.5 text-sm font-medium text-ink-soft transition-colors hover:bg-slateink hover:text-ink"
                 >
                   {link.label}
@@ -86,7 +90,12 @@ export function SiteHeader() {
               ))}
             </nav>
             <Button asChild size="lg" className="mt-5 w-full">
-              <a href={WA_LINK} target="_blank" rel="noopener noreferrer">
+              <a
+                href={WA_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMenuOpen(false)}
+              >
                 Chat admin WhatsApp
               </a>
             </Button>

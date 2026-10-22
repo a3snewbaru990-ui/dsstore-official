@@ -28,7 +28,7 @@ export const PACKAGES: Pkg[] = [
     tier: "Grandmaster",
     unit: 5000,
     perStar: true,
-    note: "Paling ramah di dompet. Cocok buat bikin rank dulu sebelum nyoba tier atas.",
+    note: "Paling ramah di kantong. Cocok untuk menaikkan rank lebih dulu sebelum mencoba tier di atasnya.",
   },
   {
     id: "epic",
@@ -37,7 +37,7 @@ export const PACKAGES: Pkg[] = [
     tier: "Epic",
     unit: 6000,
     perStar: true,
-    note: "Sudah bisa masuk ranah kompetitif. Cocok kalau target kamu tembus Epic atau Legend.",
+    note: "Sudah bisa masuk ranah kompetitif. Cocok jika target kamu menembus Epic atau Legend.",
   },
   {
     id: "legend",
@@ -46,7 +46,7 @@ export const PACKAGES: Pkg[] = [
     tier: "Legend",
     unit: 7000,
     perStar: true,
-    note: "Titik balik buat pemain yang sering mentok di Legend. Matchmaking-nya jauh lebih kompetitif.",
+    note: "Titik balik bagi pemain yang sering tertahan di Legend. Matchmaking-nya jauh lebih kompetitif.",
   },
   {
     id: "mythic",
@@ -55,7 +55,7 @@ export const PACKAGES: Pkg[] = [
     tier: "Mythic",
     unit: 12000,
     perStar: true,
-    note: "Titik paling dicari dan paling cepat prosesnya. Order 10 bintang ke sini dapat bonus 2 bintang gratis.",
+    note: "Titik paling dicari dan paling cepat prosesnya. Pesan 10 bintang di sini dan dapatkan bonus 2 bintang gratis.",
     tag: { text: "Paling banyak dipilih", tone: "lemon" },
   },
   {
@@ -65,7 +65,7 @@ export const PACKAGES: Pkg[] = [
     tier: "Honor",
     unit: 15000,
     perStar: true,
-    note: "Bibit rank dijaga stabil, jadi hasil akhirnya lebih rapi dan rank-nya nggak gampang turun lagi.",
+    note: "Rank dijaga stabil, jadi hasil akhirnya lebih rapi dan tidak mudah turun lagi.",
   },
   {
     id: "glory",
@@ -74,7 +74,7 @@ export const PACKAGES: Pkg[] = [
     tier: "Glory",
     unit: 20000,
     perStar: true,
-    note: "Handling khusus buat rank tinggi. Tim admin pakai strategi khusus biar poinnya nggak bocor.",
+    note: "Penanganan khusus untuk rank tinggi. Tim admin memakai strategi khusus agar poin tidak terbuang.",
     tag: { text: "Puncak ladder", tone: "gold" },
   },
   {
@@ -85,7 +85,7 @@ export const PACKAGES: Pkg[] = [
     unit: 150000,
     perStar: false,
     stars: 10,
-    note: "Sekali order, 10 match langsung dikerjakan sampai Mythic. Buat kamu yang males grinding satu-satu.",
+    note: "Sekali pesan, 10 match langsung dikerjakan sampai Mythic. Cocok untuk kamu yang malas grinding satu per satu.",
     tag: { text: "10 match penuh", tone: "gold" },
   },
 ];
@@ -137,17 +137,17 @@ export const BANNERS: Banner[] = [
   {
     id: "sora",
     eyebrow: "Promo Season 42",
-    title: "Promo Joki Gendong & Mabar",
+    title: "Promo Joki Gendong & Main Bareng",
     src: images.bannerSora,
     srcSet: `${images.bannerSoraSm} 960w, ${images.bannerSora} 1920w`,
-    alt: "Poster Promo Joki Gendong dan mabar bareng pro player",
+    alt: "Poster promosi joki gendong dan main bareng pro player",
   },
 ];
 
 export const HERO_CHIPS = [
   { icon: "zap", text: "Proses Cepat" },
   { icon: "chat", text: "Layanan Chat 24/7" },
-  { icon: "shield", text: "Pembayaran Aman!" },
+  { icon: "shield", text: "Pembayaran Aman" },
 ];
 
 export const TRUST_BADGES = [
@@ -160,8 +160,8 @@ export const TRUST_BADGES = [
 export const GUARANTEES = [
   {
     icon: "zap",
-    title: "Respon cepat",
-    body: "Admin balas di bawah 10 menit selama jam layanan 08.00 sampai 23.00 WIB. Di luar jam itu, pesanan tetap masuk dan diproses pagi berikutnya.",
+    title: "Respons cepat",
+    body: "Admin membalas di bawah 10 menit selama jam layanan 08.00 sampai 23.00 WIB. Di luar jam itu, pesanan tetap masuk dan diproses pagi berikutnya.",
   },
   {
     icon: "gauge",
@@ -171,11 +171,11 @@ export const GUARANTEES = [
   {
     icon: "shield",
     title: "Amanah, data kembali utuh",
-    body: "Data akun cuma dipakai sesuai instruksi, lalu dikembalikan lengkap dengan settingan awal kamu. Password tidak dibagikan ke siapa pun.",
+    body: "Data akun hanya dipakai sesuai instruksi, lalu dikembalikan lengkap dengan pengaturan awal kamu. Password tidak dibagikan ke siapa pun.",
   },
   {
     icon: "tag",
-    title: "Harga di depan, tanpa tipu tipu",
+    title: "Harga di depan, tanpa tipu-tipu",
     body: "Harga per bintang ditampilkan apa adanya di halaman ini. Tidak ada biaya tersembunyi yang muncul di akhir pesanan.",
   },
 ];
@@ -187,7 +187,7 @@ export const HOW_IT_WORKS = [
   },
   {
     title: "Pilih rank & bintang",
-    body: "Tentukan rank target dari GM sampai Mythic Glory, lalu atur berapa bintang yang mau dinaikkan.",
+    body: "Tentukan rank target dari GM sampai Mythic Glory, lalu atur berapa bintang yang ingin dinaikkan.",
   },
   {
     title: "Pasang promo",
@@ -199,34 +199,34 @@ export const HOW_IT_WORKS = [
   },
   {
     title: "Admin mulai joki",
-    body: "Kamu terima update progres, akun kembali utuh, dan pembayaran selesai. Semua lewat WhatsApp.",
+    body: "Kamu menerima pembaruan progres, akun kembali utuh, dan pembayaran selesai. Semua lewat WhatsApp.",
   },
 ];
 
 export const FAQS = [
   {
     q: "Berapa lama proses joki rank selesai?",
-    a: "Satu bintang biasanya selesai 30 sampai 60 menit. Untuk paket Full Grading Mythic 10 match, prosesnya bisa memakan 1 sampai 2 hari tergantung antrean dan matchmaking. Admin kasih estimasi terbaru begitu pesanan dikonfirmasi.",
+    a: "Satu bintang biasanya selesai 30 sampai 60 menit. Untuk paket Full Grading Mythic 10 match, prosesnya bisa memakan 1 sampai 2 hari tergantung antrean dan matchmaking. Admin memberikan estimasi terbaru begitu pesanan dikonfirmasi.",
   },
   {
     q: "Apakah data akun aman dan dikembalikan utuh?",
-    a: "Ya. Data akun cuma dipakai untuk menjalankan proses joki sesuai instruksi, lalu dikembalikan lengkap dengan settingan awal kamu. Demi keamanan, password akun nggak pernah dibagikan ke pihak lain.",
+    a: "Ya. Data akun hanya dipakai untuk menjalankan proses joki sesuai instruksi, lalu dikembalikan lengkap dengan pengaturan awal kamu. Demi keamanan, password akun tidak pernah dibagikan ke pihak lain.",
   },
   {
-    q: "Cara pakai kode promo DSSTORE gimana?",
-    a: "Di bagian Kode Promo (langkah 4) formulir, ketik DSSTORE lalu klik “Gunakan”. Potongan 10% langsung kepotong dari subtotal dan ikut tercantum di ringkasan serta pesan WhatsApp yang dikirim ke admin.",
+    q: "Bagaimana cara memakai kode promo DSSTORE?",
+    a: "Di bagian Kode Promo (langkah 4) formulir, ketik DSSTORE lalu klik “Gunakan”. Potongan 10% langsung dipotong dari subtotal dan ikut tercantum di ringkasan serta pesan WhatsApp yang dikirim ke admin.",
   },
   {
     q: "Apakah bonus 2 bintang berlaku otomatis?",
-    a: "Ya. Begitu jumlah bintang yang dipesan mencapai 10 atau lebih, dua bintang bonus langsung menyala di meter bintang dan masuk ke ringkasan. Nggak ada kode atau pengajuan tambahan yang perlu dilakukan.",
+    a: "Ya, sepenuhnya otomatis. Begitu jumlah bintang yang dipesan mencapai 10 atau lebih, dua bintang bonus langsung muncul sendiri di meter bintang dan ikut masuk ke ringkasan pesanan. Kamu tidak perlu menekan tombol, memakai kode, atau mengajukan apa pun ke admin.",
   },
   {
-    q: "Metode pembayaran apa aja yang diterima?",
+    q: "Metode pembayaran apa saja yang diterima?",
     a: "QRIS, DANA, OVO, GoPay, ShopeePay, plus transfer manual ke BCA, BRI, dan Mandiri. Nomor QRIS dan rekening dikirim admin lewat WhatsApp setelah pesanan dikonfirmasi.",
   },
   {
-    q: "Bisa request hero atau spell tertentu?",
-    a: "Bisa. Tulis request hero dan konfigurasi spell di kolom Catatan pada langkah 1. Admin mengikuti instruksi semaksimal mungkin, tergantung ketersediaan draft dan situasi match.",
+    q: "Bisakah meminta hero atau spell tertentu?",
+    a: "Bisa. Tulis permintaan hero dan konfigurasi spell di kolom Catatan pada langkah 1. Admin mengikuti instruksi semaksimal mungkin, tergantung ketersediaan draft dan situasi match.",
   },
 ];
 

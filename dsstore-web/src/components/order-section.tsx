@@ -142,7 +142,7 @@ export function OrderSection() {
     const current = order.step;
     if (!order.validateStep(current)) {
       order.focusFirstError();
-      toast.error("Lengkapi dulu data yang masih kurang.");
+      toast.error("Lengkapi data yang masih kurang.");
       return;
     }
     if (current < TOTAL_STEPS) order.scrollToStep(current + 1);
@@ -158,7 +158,7 @@ export function OrderSection() {
       event.preventDefault();
       order.scrollToStep(bad);
       order.focusFirstError();
-      toast.error(`Lengkapi dulu data di bagian ${bad}.`);
+      toast.error(`Lengkapi data di bagian ${bad} terlebih dahulu.`);
       return;
     }
     toast.success("Membuka WhatsApp dengan ringkasan pesanan.");
@@ -275,7 +275,7 @@ export function OrderSection() {
 
                   <Field
                     id="emailHp"
-                    label="Email / No. Hp / Moonton ID"
+                    label="Email / No. HP / Moonton ID"
                     error={errors.emailHp}
                   >
                     <Input
@@ -295,7 +295,7 @@ export function OrderSection() {
                     <Field
                       id="password"
                       label="Password"
-                      hint="Dipakai buat pengerjaan joki saja, nggak dibagikan ke pihak lain."
+                      hint="Dipakai untuk pengerjaan joki saja dan tidak dibagikan ke pihak lain."
                       error={errors.password}
                     >
                       <div className="relative">
@@ -327,8 +327,8 @@ export function OrderSection() {
                   <div className="sm:col-span-2">
                     <Field
                       id="nickname"
-                      label="User ID & Nick Name"
-                      hint="Nickname in-game buat admin biar bisa cek akun kamu."
+                      label="User ID & Nickname"
+                      hint="Nickname in-game agar admin dapat memeriksa akun kamu."
                       error={errors.nickname}
                     >
                       <Input
@@ -348,15 +348,15 @@ export function OrderSection() {
                   <div className="sm:col-span-2">
                     <Field
                       id="catatan"
-                      label="Catatan Untuk Penjoki (Request Worker Disini)"
-                      hint="Contoh: pakai hero Granger, spell Flicker dan Execute…"
+                      label="Catatan untuk Penjoki (Permintaan Worker)"
+                      hint="Contoh: gunakan hero Granger, spell Flicker dan Execute…"
                       error={errors.catatan}
                     >
                       <Textarea
                         id="catatan"
                         className="field resize-y"
                         rows={3}
-                        placeholder="Contoh: pakai hero Granger, spell Flicker dan Execute…"
+                        placeholder="Contoh: gunakan hero Granger, spell Flicker dan Execute…"
                         aria-invalid={errors.catatan ? "true" : undefined}
                         aria-describedby="hint-catatan err-catatan"
                         value={values.catatan}
@@ -371,7 +371,7 @@ export function OrderSection() {
               <Panel
                 n={2}
                 title="Pilih Nominal"
-                desc="Tentukan rank target yang mau dikejar, dari GM sampai Mythic Glory."
+                desc="Tentukan rank target yang ingin dicapai, dari GM sampai Mythic Glory."
               >
                 <div
                   id="rank-group"
@@ -433,7 +433,7 @@ export function OrderSection() {
               <Panel
                 n={3}
                 title="Masukkan Jumlah Pembelian"
-                desc="Atur berapa bintang yang mau dinaikkan. Bonusnya dihitung otomatis."
+                desc="Atur berapa bintang yang ingin dinaikkan. Bonusnya dihitung otomatis."
               >
                 <label className="field-label" htmlFor="stars">
                   Jumlah bintang
@@ -445,7 +445,7 @@ export function OrderSection() {
                     size="icon"
                     className="h-11 w-11"
                     aria-label="Kurangi jumlah bintang satu"
-                    disabled={!order.pkg.perStar}
+                    disabled={!order.hasPkg || !order.pkg.perStar}
                     onClick={() => order.setStars(order.stars - 1)}
                   >
                     <Icon name="minus" className="h-4 w-4" />
@@ -458,7 +458,7 @@ export function OrderSection() {
                     min={1}
                     max={100}
                     step={1}
-                    disabled={!order.pkg.perStar}
+                    disabled={!order.hasPkg || !order.pkg.perStar}
                     value={order.stars}
                     aria-invalid={errors.stars ? "true" : undefined}
                     aria-describedby="hint-stars err-stars"
@@ -470,7 +470,7 @@ export function OrderSection() {
                     size="icon"
                     className="h-11 w-11"
                     aria-label="Tambah jumlah bintang satu"
-                    disabled={!order.pkg.perStar}
+                    disabled={!order.hasPkg || !order.pkg.perStar}
                     onClick={() => order.setStars(order.stars + 1)}
                   >
                     <Icon name="plus" className="h-4 w-4" />
@@ -480,7 +480,7 @@ export function OrderSection() {
                       <button
                         key={n}
                         type="button"
-                        disabled={!order.pkg.perStar}
+                        disabled={!order.hasPkg || !order.pkg.perStar}
                         onClick={() => order.setStars(n)}
                         className="rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-semibold text-ink-soft transition-colors hover:border-ink-faint hover:text-ink disabled:opacity-45"
                       >
@@ -490,14 +490,14 @@ export function OrderSection() {
                   </div>
                 </div>
                 <p className="field-hint" id="hint-stars">
-                  Minimal 1, maksimal 100 bintang per order.
+                  Minimal 1, maksimal 100 bintang per pesanan.
                 </p>
                 <p className="field-error" id="err-stars" hidden={!errors.stars}>
                   <Icon name="alert" className="h-4 w-4 flex-none" />
                   <span>{errors.stars}</span>
                 </p>
 
-                <div className="mt-5 rounded-xl border border-border bg-card/70 p-4">
+                <div className="mt-5 rounded-xl border border-border bg-card p-4">
                   <p className="eyebrow">Bintang yang akan dikumpulkan</p>
                   <StarMeter
                     className="mt-2.5"
@@ -507,15 +507,17 @@ export function OrderSection() {
                   />
                   <p className="mt-2.5 text-xs leading-relaxed text-ink-mute">
                     {t.bonusStars > 0
-                      ? `Bonus ${plain.format(t.bonusStars)} bintang gratis sudah nyala. Total ${plain.format(t.totalStars)} bintang.`
-                      : `Order ${BONUS_THRESHOLD} bintang atau lebih, dapat bonus ${BONUS_STARS} bintang gratis.`}
+                      ? `Bonus ${plain.format(t.bonusStars)} bintang gratis sudah aktif otomatis. Total ${plain.format(t.totalStars)} bintang.`
+                      : order.hasPkg
+                        ? `Pesan ${BONUS_THRESHOLD} bintang atau lebih, dapatkan bonus ${BONUS_STARS} bintang gratis.`
+                        : "Pilih paket dulu, lalu atur jumlah bintangnya."}
                   </p>
                 </div>
 
                 {order.pkg.id === "grading" ? (
                   <p className="mt-4 rounded-lg border border-lemon/40 bg-lemon/10 px-4 py-3 text-sm leading-relaxed text-lemon">
-                    Paket Full Grading sudah include 10 match, jadi jumlah bintang nggak
-                    bisa diubah.
+                    Paket Full Grading sudah termasuk 10 match, jadi jumlah bintang tidak
+                    dapat diubah.
                   </p>
                 ) : null}
               </Panel>
@@ -524,7 +526,7 @@ export function OrderSection() {
               <Panel
                 n={4}
                 title="Kode Promo"
-                desc="Cek promo yang sedang jalan, lalu pasang kode voucher kalau ada."
+                desc="Cek promo yang sedang berlangsung, lalu pasang kode voucher jika ada."
               >
                 <div className="flex items-start gap-3.5 rounded-lg border border-lemon/40 bg-card p-4">
                   <span className="mt-0.5 flex h-9 w-9 flex-none items-center justify-center rounded-md bg-lemon text-[#15130b]">
@@ -532,11 +534,11 @@ export function OrderSection() {
                   </span>
                   <div className="min-w-0">
                     <p className="text-base font-bold text-ink">
-                      Order {BONUS_THRESHOLD} bintang dapat bonus {BONUS_STARS} bintang
+                      Pesan {BONUS_THRESHOLD} bintang, dapat bonus {BONUS_STARS} bintang
                     </p>
                     <p className="mt-1 text-sm leading-relaxed text-ink-mute">
-                      Bonusnya nyalain sendiri begitu total bintang minimal {BONUS_THRESHOLD}.
-                      Nggak ada kode tambahan yang perlu dipakai.
+                      Bonus aktif otomatis begitu total bintang mencapai {BONUS_THRESHOLD}.
+                      Kamu tidak perlu menekan tombol atau memasukkan kode apa pun.
                     </p>
                   </div>
                 </div>
@@ -594,7 +596,7 @@ export function OrderSection() {
                       onClick={() => setPromoOpen((v) => !v)}
                       aria-expanded={promoOpen}
                     >
-                      Pakai Promo Yang Tersedia
+                      Gunakan Promo yang Tersedia
                       <Icon
                         name="chevronDown"
                         className={`h-4 w-4 transition-transform duration-200 ${
@@ -619,7 +621,7 @@ export function OrderSection() {
                                   Potongan {v.percent}% dari subtotal
                                 </span>
                               </span>
-                              <span className="chip chip-lemon flex-none">Pakai</span>
+                              <span className="chip chip-lemon flex-none">Gunakan</span>
                             </button>
                           </li>
                         ))}
@@ -633,7 +635,7 @@ export function OrderSection() {
               <Panel
                 n={5}
                 title="Pilih Pembayaran"
-                desc="Pilih yang paling gampang buat kamu."
+                desc="Pilih yang paling mudah untuk kamu."
               >
                 <div
                   id="payment-group"
@@ -675,9 +677,9 @@ export function OrderSection() {
                   </p>
                 </div>
 
-                <p className="mt-6 rounded-lg border border-border bg-card/60 px-4 py-3 text-sm leading-relaxed text-ink-mute">
-                  Nomor QRIS dan rekening dikirim admin lewat WhatsApp setelah pesanan kamu
-                  dikonfirmasi.
+                <p className="mt-6 rounded-lg border border-border bg-card px-4 py-3 text-sm leading-relaxed text-ink-mute">
+                  Nomor QRIS dan nomor rekening dikirim admin lewat WhatsApp setelah pesanan
+                  kamu dikonfirmasi.
                 </p>
               </Panel>
 
@@ -685,13 +687,13 @@ export function OrderSection() {
               <Panel
                 n={6}
                 title="Detail Kontak"
-                desc="Nomor ini dipakai admin untuk kirim update progres joki ke kamu."
+                desc="Nomor ini dipakai admin untuk mengirim pembaruan progres joki kepada kamu."
               >
                 <div className="grid gap-5">
                   <Field
                     id="waPembeli"
                     label="No. WhatsApp"
-                    hint="Tulis tanpa angka 0 di depan. Contoh: 8960xxxx"
+                    hint="Contoh: 081234567890 atau 6281234567890"
                     error={errors.waPembeli}
                   >
                     <Input
@@ -708,10 +710,10 @@ export function OrderSection() {
                     />
                   </Field>
 
-                  <div className="rounded-xl border border-border bg-card/70 p-4">
+                  <div className="rounded-xl border border-border bg-card p-4">
                     <h4 className="text-sm font-bold text-ink">Pratinjau pesan WhatsApp</h4>
                     <p className="mt-1 text-xs leading-relaxed text-ink-mute">
-                      Inilah yang bakal terkirim ke admin. Data akun ikut disertakan biar
+                      Inilah yang akan terkirim ke admin. Data akun ikut disertakan agar
                       langsung diproses.
                     </p>
                     <pre className="num mt-3 max-h-56 overflow-auto whitespace-pre-wrap break-words rounded-lg border border-border bg-background p-3 text-xs leading-relaxed text-ink-soft no-scrollbar">
@@ -747,7 +749,7 @@ export function OrderSection() {
             </div>
 
             {/* Navigasi formulir */}
-            <div className="mt-4 flex flex-col-reverse gap-3 rounded-xl border border-border bg-card/60 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
+            <div className="mt-4 flex flex-col-reverse gap-3 rounded-xl border border-border bg-card px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-5">
               <Button
                 type="button"
                 variant="outline"
@@ -785,7 +787,7 @@ export function OrderSection() {
             <div className="lg:sticky lg:top-[7.5rem]">
               <button
                 type="button"
-                className="mb-4 flex w-full items-center gap-4 rounded-xl border border-border bg-card/70 p-4 text-left shadow-card transition-transform duration-150 hover:-translate-y-0.5"
+                className="mb-4 flex w-full items-center gap-4 rounded-xl border border-border bg-card p-4 text-left shadow-card transition-transform duration-150 hover:-translate-y-0.5"
                 onClick={() =>
                   window.open(
                     "https://wa.me/6281807283181",
@@ -802,7 +804,7 @@ export function OrderSection() {
                     Butuh Bantuan?
                   </span>
                   <span className="block text-sm leading-relaxed text-ink-mute">
-                    Kamu bisa hubungi admin disini.
+                    Kamu dapat menghubungi admin di sini.
                   </span>
                 </span>
               </button>

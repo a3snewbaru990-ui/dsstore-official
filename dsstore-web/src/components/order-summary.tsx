@@ -19,18 +19,19 @@ export function OrderSummary({ className }: { className?: string }) {
       window.setTimeout(() => setCopied(false), 2200);
       toast.success("Ringkasan pesanan tersalin.");
     } catch {
-      toast.error("Gagal menyalin. Select teks pratinjaunya lalu salin manual.");
+      toast.error("Gagal menyalin. Pilih teks pratinjau lalu salin secara manual.");
     }
   };
 
-  const starsNote =
-    t.bonusStars > 0
+  const starsNote = !order.hasPkg
+    ? "Pilih paket pada langkah 2 untuk melihat estimasi bintang."
+    : t.bonusStars > 0
       ? `${plain.format(t.qty)} bintang + bonus ${plain.format(t.bonusStars)} = ${plain.format(t.totalStars)} bintang`
-      : `${plain.format(t.qty)} bintang. Bonus 2 bintang gratis mulai order ${BONUS_THRESHOLD} bintang.`;
+      : `${plain.format(t.qty)} bintang. Bonus 2 bintang gratis mulai pesanan ${BONUS_THRESHOLD} bintang.`;
 
   return (
     <div className={className}>
-      <div className="rounded-xl border border-border bg-card/70 p-5 shadow-soft">
+      <div className="rounded-xl border border-border bg-card p-5 shadow-soft">
         <h3 className="text-sm font-bold uppercase tracking-wide text-ink">
           Ringkasan pesanan
         </h3>
@@ -38,18 +39,24 @@ export function OrderSummary({ className }: { className?: string }) {
         <div className="mt-4 space-y-2.5">
           <p className="ticket__row">
             <span className="ticket__key">Paket</span>
-            <span className="ticket__val">{t.pkg.label}</span>
+            <span className="ticket__val">
+              {order.hasPkg ? t.pkg.label : "Belum dipilih"}
+            </span>
           </p>
           <p className="ticket__row">
             <span className="ticket__key">Harga satuan</span>
-            <span className="ticket__val">{idr.format(t.unit)}</span>
+            <span className="ticket__val">
+              {order.hasPkg ? idr.format(t.unit) : "—"}
+            </span>
           </p>
           <p className="ticket__row">
             <span className="ticket__key">Jumlah</span>
             <span className="ticket__val">
-              {t.pkg.perStar
-                ? `${plain.format(t.qty)} bintang`
-                : `${t.qty} match`}
+              {!order.hasPkg
+                ? "—"
+                : t.pkg.perStar
+                  ? `${plain.format(t.qty)} bintang`
+                  : `${t.qty} match`}
             </span>
           </p>
         </div>
@@ -83,12 +90,16 @@ export function OrderSummary({ className }: { className?: string }) {
         <div className="ticket__dash mt-4 pt-4">
           <div className="flex items-end justify-between gap-3">
             <span className="text-sm font-semibold text-ink-soft">Total bayar</span>
-            <span className="num text-2xl font-bold text-ink">{idr.format(t.total)}</span>
+            <span className="num text-2xl font-bold text-ink">
+              {order.hasPkg ? idr.format(t.total) : "—"}
+            </span>
           </div>
           <p className="mt-2 text-xs leading-relaxed text-ink-faint">
-            {t.bonusStars > 0
-              ? `Harga ini sudah termasuk bonus ${plain.format(t.bonusStars)} bintang gratis.`
-              : "Belum termasuk biaya admin, dan biaya admin gratis."}
+            {!order.hasPkg
+              ? "Pilih paket terlebih dahulu untuk melihat total."
+              : t.bonusStars > 0
+                ? `Harga ini sudah termasuk bonus ${plain.format(t.bonusStars)} bintang gratis.`
+                : "Tidak ada biaya admin tambahan."}
           </p>
         </div>
 
@@ -104,12 +115,12 @@ export function OrderSummary({ className }: { className?: string }) {
                   event.preventDefault();
                   order.scrollToStep(bad);
                   order.focusFirstError();
-                  toast.error(`Lengkapi dulu data di bagian ${bad}.`);
+                  toast.error(`Lengkapi data di bagian ${bad} terlebih dahulu.`);
                 }
               }}
             >
               <Icon name="send" className="h-4 w-4" />
-              Pesan Sekarang!
+              Pesan Sekarang
             </a>
           </Button>
           <Button type="button" variant="outline" className="w-full" onClick={copy}>
@@ -119,12 +130,12 @@ export function OrderSummary({ className }: { className?: string }) {
         </div>
       </div>
 
-      <div className="mt-4 rounded-xl border border-border bg-card/60 p-4">
+      <div className="mt-4 rounded-xl border border-border bg-card p-4">
         <p className="text-xs font-bold uppercase tracking-wide text-ink">
           Masih ragu?
         </p>
         <p className="mt-1.5 text-xs leading-relaxed text-ink-mute">
-          Chat admin di WhatsApp{" "}
+          Hubungi admin di WhatsApp{" "}
           <a
             href={WA_LINK}
             target="_blank"
