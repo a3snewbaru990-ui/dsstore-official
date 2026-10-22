@@ -1,7 +1,7 @@
 # DS Store — Joki Rank Mobile Legends Season 42
 
 Landing page resmi **DS Store**: promo joki rank Mobile Legends Season 42.
-Halaman ini dibangun ulang dengan gaya Takapedia (kartu rapat, chip navigasi,
+Halaman ini dibangun ulang dengan gaya (kartu rapat, chip navigasi,
 CTA kuning kontras) lalu di-rethem ke warna logo DS Store — navy tua
 `#0a0c17` + lemon `#fde126`.
 
